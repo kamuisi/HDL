@@ -1,0 +1,19 @@
+module lab_2_2 (ReadAddress1, ReadAddress2,
+WriteAddress, WriteData, ReadData1, ReadData2
+ReadWriteEn, clk);
+
+input [4:0] ReadAddress1, ReadAddress2, WriteAddress;
+input [31:0] WriteData;
+input clk;
+output reg [31:0] ReadData1, ReadData2;
+output reg ReadWriteEn;
+reg [31:0] regfile;
+
+always @ (posedge clk) 
+	begin 
+		if (ReadWriteEn)
+			regfile[writeAddress] <= WriteData;
+			readData1 <= regfile[readAddress1];
+			readData2 <= regfile[readAddress2];
+	end
+endmodule

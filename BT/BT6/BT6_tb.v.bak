@@ -1,0 +1,76 @@
+`timescale 1ns/100ps
+
+module BT6_tb;
+
+    reg [1:0] R;
+    reg clk;
+    
+    wire [2:0] Y;
+    
+    BT6 uut (
+        .R(R), 
+        .Y(Y), 
+        .clk(clk)
+    );
+    
+    initial begin
+        clk = 0;
+        forever #10 clk = ~clk; 
+    end
+    
+    initial begin
+        R = 0;
+        
+        #20;
+        
+        $display("Input R1 3 lan");
+        R = 1;
+        #20; 
+        #20; 
+        #20; 
+        
+        $display("\nLen tang 3 roi xuong tang G");
+        R = 3;
+        #20; 
+        R = 0;
+        #20; 
+        #20; 
+        
+        $display("\nLen xuong random");
+        R = 2;
+        #20; 
+        R = 1;
+        #20; 
+        R = 3;
+        #20; 
+        R = 2;
+        #20; 
+        R = 0;
+        #20; 
+        
+        $display("\nTest FSM flow");
+        R = 0;
+        #20; 
+        R = 1;
+        #20; 
+        R = 1;
+        #20; 
+        R = 2;
+        #20; 
+        R = 2;
+        #20; 
+        R = 3;
+        #20; 
+        R = 3;
+        #20; 
+        
+        #40;
+        $finish;
+    end
+    
+    initial begin
+        $monitor("Time = %0t, State = %b, R = %b, Y = %b", 
+                 $time, uut.State, R, Y);
+    end
+
+endmodule

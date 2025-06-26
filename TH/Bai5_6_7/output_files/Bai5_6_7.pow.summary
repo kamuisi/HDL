@@ -1,0 +1,12 @@
+PowerPlay Power Analyzer Status : Successful - Fri Jun 13 18:00:54 2025
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Revision Name : Bai5_6_7
+Top-level Entity Name : SOC
+Family : Cyclone II
+Device : EP2C35F672C6
+Power Models : Final
+Total Thermal Power Dissipation : 183.22 mW
+Core Dynamic Thermal Power Dissipation : 61.36 mW
+Core Static Thermal Power Dissipation : 80.17 mW
+I/O Thermal Power Dissipation : 41.69 mW
+Power Estimation Confidence : Low: user provided insufficient toggle rate data

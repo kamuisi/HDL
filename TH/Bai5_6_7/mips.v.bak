@@ -1,0 +1,16 @@
+module mips
+(
+	input clk,
+	input rst
+);
+
+wire [31:0] pc;
+wire [31:0] instr; 
+wire [5:0] imAddr;
+wire [4:0] a3 = (regDst == 1) ? instr[15:11]
+					 (regDst == 2) ? 5b’11111 : instr[20:16];
+assign imAddr = pc >> 2;
+register register_pc(clk, rst, ,pc);
+register_file register_file_1(clk, instr[25:21], instr[20:16], a3, rd1, rd2, wd3, regWrite);
+rom instruction_memory(imAddr, instr);
+ram data_mem(clk, aluResult, memWrite, rd2, );

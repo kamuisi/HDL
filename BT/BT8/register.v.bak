@@ -1,0 +1,23 @@
+module register(clk, rst, out, data_in);
+input clk, rst;
+input [31:0] data_in;
+reg [31:0] reg_fifo [31:0];
+output reg [31:0] out;
+reg [4:0] wr_ptr, r_ptr;
+assign full = (wr_ptr == 1);
+assign empty = (wr_ptr == r_ptr);
+always @(posedge clk)
+	if(rst)
+		wr_ptr = 0;
+		r_ptr = 0;
+		out = 32'bZ;
+	else
+		if(wr_en & !full)
+			reg_fifo(wr_ptr) = data_in;
+			wr_ptr = wr_ptr + 1;
+		if(wr_en != empty)
+			out = reg_fifo(r_ptr);
+			r_ptr = r_ptr + 1;
+endmodule		
+			
+			

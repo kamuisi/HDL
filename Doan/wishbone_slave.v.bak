@@ -1,0 +1,33 @@
+module wishbone();
+input RST_I, CLK_I, WE_I, SEL_I, STB_I,
+CYC_I, TAGN_I;
+input [31:0] ADR_I, DAT_I;
+output reg [31:0] DAT_O;
+output reg ACK_O, TAGN_O
+
+always @(posedge CLK_I) begin
+	if(RST_I) begin
+		ACK_O <= 0;
+	end else begin
+		ACK_O <= 0;
+		
+		if (STB_I && CYC_I) begin
+			ACK_O <= 1;
+			
+			if(WE_I) begin
+				case(ADR_I[7:0])
+					8'h00: ;
+					8'h10: X_real[ADR_I[4:2]] <= DAT_I;
+					8'h20: X_imag[ADR_I[4:2]] <= DAT_I;
+				endcase
+			end else begin
+				case(ADR_I[7:0])
+					8'h04: DAT_O <= {31'b0, done};
+					8'h30: DAT_O <= x_real[ADR_I[4:2]];
+					8'h40: DAT_O <= x_imag[ADR_I[4:2]];
+				endcase
+			end
+		end
+	end
+end
+endmodule

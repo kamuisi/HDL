@@ -1,0 +1,14 @@
+module register
+(
+	input clk,
+	input rst_n,
+	input [31:0] pc_new,
+	output [31:0] reg pc
+);
+
+always @(posedge clk or negedge rst)
+	if(~rst)
+		pc <= {32{1'b0}};
+	else
+		pc <= pc_new;
+endmodule

@@ -1,0 +1,27 @@
+`timescale 1ns/1ps
+module testbench;
+reg M;
+reg [0:1] S;
+wire [0:31] F;
+reg [0:31] A, B;
+
+
+ALU(.M(M), .S(S), .A(A), .B(B), .F(F));
+
+initial
+begin 
+	A=3;
+	B=9;
+	fork
+		#6 {M, S} = 0;
+		#11 {M, S} = 1;
+		#26 {M, S} = 2;
+		#31 {M, S} = 3;
+		#46 {M, S} = 4;
+		#51 {M, S} = 5;
+		#66 {M, S} = 6;
+		#71 {M, S} = 7;
+		#100 $finish;
+		join
+end
+endmodule

@@ -1,0 +1,53 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do BT8_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/SUS/Desktop/HDL/BT/BT8 {C:/Users/SUS/Desktop/HDL/BT/BT8/lifo_stack.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module lifo_stack
+# 
+# Top level modules:
+# 	lifo_stack
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/SUS/Desktop/HDL/BT/BT8 {C:/Users/SUS/Desktop/HDL/BT/BT8/lifo_stack_tb.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module lifo_stack_tb
+# 
+# Top level modules:
+# 	lifo_stack_tb
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L rtl_work -L work -voptargs="+acc"  lifo_stack_tb
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps lifo_stack_tb 
+# Loading work.lifo_stack_tb
+# Loading work.lifo_stack
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Time=0 | push=0, pop=0, data_in=00000000, out=xxxxxxxx
+# Time=5000 | push=0, pop=0, data_in=00000000, out=zzzzzzzz
+# Time=15000 | push=1, pop=0, data_in=12153524, out=zzzzzzzz
+# Time=25000 | push=1, pop=0, data_in=c0895e81, out=zzzzzzzz
+# Time=35000 | push=1, pop=0, data_in=8484d609, out=zzzzzzzz
+# Time=45000 | push=1, pop=0, data_in=b1f05663, out=zzzzzzzz
+# Time=55000 | push=0, pop=0, data_in=00000000, out=zzzzzzzz
+# Time=75000 | push=0, pop=1, data_in=00000000, out=zzzzzzzz
+# Time=115000 | push=0, pop=0, data_in=00000000, out=zzzzzzzz
+# ** Note: $finish    : C:/Users/SUS/Desktop/HDL/BT/BT8/lifo_stack_tb.v(65)
+#    Time: 135 ns  Iteration: 0  Instance: /lifo_stack_tb
+# 1
+# Break in Module lifo_stack_tb at C:/Users/SUS/Desktop/HDL/BT/BT8/lifo_stack_tb.v line 65
+# Simulation Breakpoint: 1
+# Break in Module lifo_stack_tb at C:/Users/SUS/Desktop/HDL/BT/BT8/lifo_stack_tb.v line 65
+# MACRO ./BT8_run_msim_rtl_verilog.do PAUSED at line 17

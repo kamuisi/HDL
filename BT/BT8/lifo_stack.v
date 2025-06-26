@@ -1,0 +1,32 @@
+module lifo_stack (
+    input clk,
+    input rst,
+    input push,
+    input pop,
+    input [31:0] data_in,
+    output reg [31:0] out
+);
+
+    reg [31:0] stack [31:0];   
+    reg [4:0] sp;              
+
+    wire full = (sp == 5'd32);
+    wire empty = (sp == 0);
+
+    always @(posedge clk) begin
+        if (rst) begin
+            sp = 0;
+            out = 32'bz;
+        end else begin
+            if (push && !full) begin
+                stack[sp] = data_in;
+                sp = sp + 1;
+            end
+            if (pop && !empty) begin
+                sp = sp - 1;
+                out = stack[sp];  
+            end
+        end
+    end
+
+endmodule

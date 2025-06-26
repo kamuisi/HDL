@@ -1,0 +1,83 @@
+module top_module (
+    input RST_I,
+    input CLK_I,
+    input WE_I,
+    input STB_I,
+    input CYC_I,
+    input [31:0] DAT_I,
+    input [7:0] ADR_I,
+    output [31:0] DAT_O,
+    output ACK_O
+);
+
+    wire start;
+    wire done;
+    wire [31:0] X_real, X_imag;
+    wire [31:0] x_real, x_imag;
+    wire w_real, w_imag;
+    wire [2:0] addr_ram;
+
+    wire [31:0] ram_out_w, ram_out_i;
+    wire [2:0] idft_addr;
+
+    wire rw_real, rw_imag, wi_real, wi_imag;
+
+    // Wishbone slave
+    wishbone_slave u_slave (
+        .RST_I(RST_I),
+        .CLK_I(CLK_I),
+        .WE_I(WE_I),
+        .STB_I(STB_I),
+        .CYC_I(CYC_I),
+        .ADR_I(ADR_I),
+        .DAT_I(DAT_I),
+        .x_real(ram_out_i),
+        .x_imag(ram_out_i),  // dùng tạm chung để đơn giản
+        .done(done),
+        .start(start),
+        .w_real(w_real),
+        .w_imag(w_imag),
+        .DAT_O(DAT_O),
+        .ACK_O(ACK_O),
+        .X_real(X_real),
+        .X_imag(X_imag),
+        .addr_ram(addr_ram)
+    );
+
+    // IDFT core
+    idft_core u_idft (
+        .clk(CLK_I),
+        .rst(RST_I),
+        .start(start),
+        .done(done),
+        .rw_real(rw_real),
+        .rw_imag(rw_imag),
+        .wi_real(wi_real),
+        .wi_imag(wi_imag),
+        .x_real_in(ram_out_i),
+        .x_imag_in(ram_out_i),
+        .X_real_out(X_real),
+        .X_imag_out(X_imag),
+        .addr_out(idft_addr)
+    );
+
+    // RAM
+    local_ram u_ram (
+        .clk(CLK_I),
+        .addr_w(addr_ram),
+        .addr_i(idft_addr),
+        .data_in_w(X_real),
+        .data_out_w(ram_out_w),
+        .data_in_i(X_real),
+        .data_out_i(ram_out_i),
+        .ww_real(w_real),
+        .ww_imag(w_imag),
+        .wi_real(wi_real),
+        .wi_imag(wi_imag),
+        .rw_real(rw_real),
+        .rw_imag(rw_imag),
+        .ri_real(1'b0),
+        .ri_imag(1'b0)
+    );
+
+endmodule

@@ -1,0 +1,14 @@
+module bus_mux
+( …
+);
+always @*
+	casez (bSel)
+		default : out = in0;
+		6'b?????1 : out = in0;
+		6'b????10 : out = in1;
+		6'b???100 : out = in2;
+		6'b??1000 : out = in3;
+		6'b?10000 : out = in4;
+		6'b100000 : out = in5; 
+	endcase
+endmodule

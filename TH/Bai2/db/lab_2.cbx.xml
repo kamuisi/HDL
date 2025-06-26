@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="lab_2">
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab_2_2|altsyncram:regfile_rtl_0" CBX_FILE_NAME="altsyncram_ikd1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab_2_2|altsyncram:regfile_rtl_1" CBX_FILE_NAME="altsyncram_ikd1.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

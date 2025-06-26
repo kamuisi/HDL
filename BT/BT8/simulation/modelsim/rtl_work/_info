@@ -1,0 +1,45 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\SUS\Desktop\HDL\BT\BT8\simulation\modelsim
+vlifo_stack
+IE7E=ldNW@n;?mLaR5D?5F3
+V=_lL^[dN1<?;hNZbUVz4m3
+Z1 dC:\Users\SUS\Desktop\HDL\BT\BT8\simulation\modelsim
+w1744617195
+8C:/Users/SUS/Desktop/HDL/BT/BT8/lifo_stack.v
+FC:/Users/SUS/Desktop/HDL/BT/BT8/lifo_stack.v
+L0 1
+Z2 OV;L;10.1d;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+!i10b 1
+!s100 Ca^G16?ok[AVK>]5Ofh4V0
+!s85 0
+!s108 1744617219.011000
+!s107 C:/Users/SUS/Desktop/HDL/BT/BT8/lifo_stack.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/SUS/Desktop/HDL/BT/BT8|C:/Users/SUS/Desktop/HDL/BT/BT8/lifo_stack.v|
+!s101 -O0
+Z4 !s92 -vlog01compat -work work +incdir+C:/Users/SUS/Desktop/HDL/BT/BT8 -O0
+vlifo_stack_tb
+!i10b 1
+!s100 Q:?SdLPn6@6m=iSXJNbj03
+Ia>DdX4NHlPgJ`l1=^<Yb43
+V082z7IL8FC]ETC`oczhMH3
+R1
+w1744616730
+8C:/Users/SUS/Desktop/HDL/BT/BT8/lifo_stack_tb.v
+FC:/Users/SUS/Desktop/HDL/BT/BT8/lifo_stack_tb.v
+L0 3
+R2
+r1
+!s85 0
+31
+!s108 1744617219.074000
+!s107 C:/Users/SUS/Desktop/HDL/BT/BT8/lifo_stack_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/SUS/Desktop/HDL/BT/BT8|C:/Users/SUS/Desktop/HDL/BT/BT8/lifo_stack_tb.v|
+!s101 -O0
+R3
+R4

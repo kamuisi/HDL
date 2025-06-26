@@ -1,0 +1,327 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\SUS\Desktop\HDL\TH\Bai5_6_7\simulation\modelsim
+valu
+I5F?LXlGDk0;ZzmFOLjZ[h2
+VZ<:D@G3eom?A4XCb>4RVc3
+Z1 dC:\Users\SUS\Desktop\HDL\TH\Bai5_6_7\simulation\modelsim
+w1749809849
+8C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/alu.v
+FC:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/alu.v
+L0 1
+Z2 OV;L;10.1d;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+Z4 !s92 -vlog01compat -work work +incdir+C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7 -O0
+!i10b 1
+!s100 5He9TdKbaX;_Jj=W5a^>80
+!s85 0
+!s108 1749812001.031000
+!s107 C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/alu.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7|C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/alu.v|
+!s101 -O0
+vbus
+IhCTgaaDdgaTo_98jF64W42
+V<_Lc:8]1NMMRleonMcSO10
+R1
+w1748222679
+8C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/bus.v
+FC:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/bus.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 `FUZnI`7VClWKB2i6IZM@1
+!s85 0
+!s108 1749812001.304000
+!s107 C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/bus.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7|C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/bus.v|
+!s101 -O0
+vbus_decoder
+I6b5>WUhN0AZTRU9Xll5ZX1
+V]CM[Eb;GKJI5XCdVP9YVN0
+R1
+w1748218591
+8C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/bus_decoder.v
+FC:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/bus_decoder.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 zDah[;]2@8[:cTn1]^VdW3
+!s85 0
+!s108 1749812001.237000
+!s107 C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/bus_decoder.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7|C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/bus_decoder.v|
+!s101 -O0
+vbus_mux
+I=cfSdc<kn=I^=Xlg1gYNg2
+Vc0`2TnZMz3KIKMLC<5?a<3
+R1
+w1748223274
+8C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/bus_mux.v
+FC:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/bus_mux.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 h50gU162zaSY<HF=<j37I3
+!s85 0
+!s108 1749812001.152000
+!s107 C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/bus_mux.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7|C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/bus_mux.v|
+!s101 -O0
+vcontrol_unit
+I8F6gh:K3fINZ610_1_YL00
+VYb3R3?OboY]O4Y2Y0Ah2k3
+R1
+w1747620517
+8C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/control_unit.v
+FC:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/control_unit.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 aRl2LO=aj1`9S`FFl5zD_0
+!s85 0
+!s108 1749812000.853000
+!s107 C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/control_unit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7|C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/control_unit.v|
+!s101 -O0
+vgpio
+IAoQJJJ:4bPizkoRm^P2Ae3
+VeCQ0eAb>>nN7`XO[ZfZbg0
+R1
+w1748255967
+8C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/gpio.v
+FC:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/gpio.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 Y`aLNz;0DaZXUd<341oGa2
+!s85 0
+!s108 1749812001.373000
+!s107 C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/gpio.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7|C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/gpio.v|
+!s101 -O0
+vIO_Mem
+IImIogiZzlnJL^:JEOzWZl2
+VKnN99_5cVJ;a<FZFPAYjL1
+R1
+w1749464667
+8C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/IO_Mem.v
+FC:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/IO_Mem.v
+L0 1
+R2
+r1
+31
+R3
+R4
+n@i@o_@mem
+!i10b 1
+!s100 g8RkNZeWZa0FD1a=klaXF0
+!s85 0
+!s108 1749812001.634000
+!s107 C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/IO_Mem.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7|C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/IO_Mem.v|
+!s101 -O0
+vmips
+IIGP^4X0NnL55K5HjRDXUb0
+V3?A]I>LmS3Om:LQ0zj0_i3
+R1
+w1748255770
+8C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/mips.v
+FC:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/mips.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 `gC?P4bo81J7G5ZM=j=fG3
+!s85 0
+!s108 1749812001.088000
+!s107 C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/mips.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7|C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/mips.v|
+!s101 -O0
+vpwm
+ITF1XYG=VF;6z6W4N?XMTd1
+VoOD1DE6]bW[m`a;@3:?o63
+R1
+w1749810896
+8C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/pwm.v
+FC:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/pwm.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 N]Xh8Rg44A]6E?SEReVX<3
+!s85 0
+!s108 1749812001.513000
+!s107 C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/pwm.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7|C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/pwm.v|
+!s101 -O0
+vregister
+IL1JCVa]hGJ65@B>^9YBUI2
+VQhk>h4OKcXo_KG8;Y1z8M1
+R1
+w1748259847
+8C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/register.v
+FC:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/register.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 ee]_6E`KUFJBkoz97?QF^1
+!s85 0
+!s108 1749812000.906000
+!s107 C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/register.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7|C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/register.v|
+!s101 -O0
+vregister_file
+I>cLbSKVMHb7P>]0SSE7j20
+VlEQVY]73MnKZ<G_:0V3Wj2
+R1
+w1747618361
+8C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/register_file.v
+FC:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/register_file.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 5feg_`=1Nlz75YVXlMh[k2
+!s85 0
+!s108 1749812000.958000
+!s107 C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/register_file.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7|C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/register_file.v|
+!s101 -O0
+vregister_we
+I]1H5]8amV`Qb0gzEejWon2
+VOLTdk?<ecX<n5=k9MzcIW2
+R1
+w1748223282
+8C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/register_we.v
+FC:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/register_we.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 U:XjzHRA3giDem_T1J0dj2
+!s85 0
+!s108 1749812001.442000
+!s107 C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/register_we.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7|C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/register_we.v|
+!s101 -O0
+vregister_we_0
+IO]?k]TkXAJ]aa=mMa__9g2
+VK5OMVP5:h=1^oSWf[]^AV2
+R1
+w1748223300
+8C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/register_we_0.v
+FC:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/register_we_0.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 ]SPiI0LZDLVcG5EkY;B<S2
+!s85 0
+!s108 1749812001.577000
+!s107 C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/register_we_0.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7|C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/register_we_0.v|
+!s101 -O0
+vrom
+IOX=c7HO54<inWn4HEfKHo1
+V2nJ^Tc=cb]NA;>3o8cjQ=0
+R1
+w1749809711
+8C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/rom.v
+FC:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/rom.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 <H][fcV5CSl?N^iJ3S7o`2
+!s85 0
+!s108 1749812001.756000
+!s107 C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/rom.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7|C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/rom.v|
+!s101 -O0
+vSOC
+I0_fTNJb:9zfkT^[gb01Z11
+V3U[mHU<VZAKnFV_BgBZmf2
+R1
+w1749811482
+8C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/SOC.v
+FC:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/SOC.v
+L0 1
+R2
+r1
+31
+R3
+R4
+n@s@o@c
+!i10b 1
+!s100 O@L`OWQg]RdiN?;BGAhYa2
+!s85 0
+!s108 1749812001.693000
+!s107 C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/SOC.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7|C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/SOC.v|
+!s101 -O0
+vsoc_tb
+!i10b 1
+!s100 kfR@EQY@MHLJ5=5TaT@_j0
+IgcHU75iLJAANk]OAd;@IZ0
+VHMJU]UVULSnMLehV55U7^1
+R1
+w1749811989
+8C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/soc_tb.v
+FC:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/soc_tb.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1749812001.818000
+!s107 C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/soc_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7|C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/soc_tb.v|
+!s101 -O0
+R3
+R4

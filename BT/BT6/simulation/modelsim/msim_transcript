@@ -1,0 +1,81 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do BT6_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/SUS/Desktop/HDL/BT/BT6 {C:/Users/SUS/Desktop/HDL/BT/BT6/BT6.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module BT6
+# 
+# Top level modules:
+# 	BT6
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/SUS/Desktop/HDL/BT/BT6 {C:/Users/SUS/Desktop/HDL/BT/BT6/BT6_tb.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module BT6_tb
+# 
+# Top level modules:
+# 	BT6_tb
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L rtl_work -L work -voptargs="+acc"  BT6_tb
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps BT6_tb 
+# Loading work.BT6_tb
+# Loading work.BT6
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Time = 0, State = 00, R = 00, Y = xxx
+# Time = 10000, State = 00, R = 00, Y = 000
+# Input R1 3 lan
+# Time = 20000, State = 00, R = 01, Y = 000
+# Time = 30000, State = 01, R = 01, Y = 001
+# Time = 50000, State = 01, R = 01, Y = 000
+# 
+# Len tang 3 roi xuong tang G
+# Time = 80000, State = 01, R = 11, Y = 000
+# Time = 90000, State = 11, R = 11, Y = 010
+# Time = 100000, State = 11, R = 00, Y = 010
+# Time = 110000, State = 00, R = 00, Y = 110
+# Time = 130000, State = 00, R = 00, Y = 000
+# 
+# Len xuong random
+# Time = 140000, State = 00, R = 10, Y = 000
+# Time = 150000, State = 10, R = 10, Y = 010
+# Time = 160000, State = 10, R = 01, Y = 010
+# Time = 170000, State = 01, R = 01, Y = 100
+# Time = 180000, State = 01, R = 11, Y = 100
+# Time = 190000, State = 11, R = 11, Y = 010
+# Time = 200000, State = 11, R = 10, Y = 010
+# Time = 210000, State = 10, R = 10, Y = 100
+# Time = 220000, State = 10, R = 00, Y = 100
+# Time = 230000, State = 00, R = 00, Y = 101
+# 
+# Test FSM flow
+# Time = 250000, State = 00, R = 00, Y = 000
+# Time = 260000, State = 00, R = 01, Y = 000
+# Time = 270000, State = 01, R = 01, Y = 001
+# Time = 290000, State = 01, R = 01, Y = 000
+# Time = 300000, State = 01, R = 10, Y = 000
+# Time = 310000, State = 10, R = 10, Y = 001
+# Time = 330000, State = 10, R = 10, Y = 000
+# Time = 340000, State = 10, R = 11, Y = 000
+# Time = 350000, State = 11, R = 11, Y = 001
+# Time = 370000, State = 11, R = 11, Y = 000
+# ** Note: $finish    : C:/Users/SUS/Desktop/HDL/BT/BT6/BT6_tb.v(68)
+#    Time: 420 ns  Iteration: 0  Instance: /BT6_tb
+# 1
+# Break in Module BT6_tb at C:/Users/SUS/Desktop/HDL/BT/BT6/BT6_tb.v line 68
+# Simulation Breakpoint: 1
+# Break in Module BT6_tb at C:/Users/SUS/Desktop/HDL/BT/BT6/BT6_tb.v line 68
+# MACRO ./BT6_run_msim_rtl_verilog.do PAUSED at line 17

@@ -1,0 +1,20 @@
+module SOC
+(
+	input clk,
+	input rst_n,
+	input [15:0] gpioInput,
+	output [15:0] gpioOutput,
+	output pwmOutput
+);
+	wire [31:0] bAddress;
+	wire [31:0] bRData0;
+	wire [31:0] bRData1;
+	wire [31:0] bRData2;
+	wire [31:0] bRData;
+	wire [5:0] bSel;
+	wire bWrite;
+	
+	bus bus_0(bAddress, bRData0, bRData1, bRData2, bRData, bSel);
+	IO_Mem mem_0(bAddress, bSel[0], bWrite, bRData, bRData0);
+	gpio gpio_0(bWrite, bSel[1], clk, gpioInput, bAddress, bRData, bRData1, gpioOutput);
+	pwm pwm_0(bSel[2], bWrite, clk, rst_n, bRData, bRData2, pwmOutput);

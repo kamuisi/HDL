@@ -1,0 +1,103 @@
+module bt6(R, Y clk);
+input [1:0] R;
+reg [1:0] State;
+output reg [2:0] Y;
+input clk;
+
+parameter S0 = 2b'00;
+parameter S1 = 2b'01;
+parameter S2 = 2b'10;
+parameter S3 = 2b'11;
+
+parameter U1 = 3b'001;
+parameter U2 = 3b'010;
+parameter U3 = 3b'011;
+parameter D1 = 3b'100;
+parameter D2 = 3b'101;
+parameter D3 = 3b'110;
+parameter K = 3b'000;
+
+always @(posedge clk)
+case(State)
+	0 : begin
+			case(R)
+				0 : begin	
+					State <= S0;
+					Y <= K;
+					end
+				1 : begin
+					State <= S1;
+					Y <= U1;
+					end
+				2 : begin
+					State <= S2;
+					Y <= U2;
+					end
+				3 : begin
+					State <= S3;
+					Y <= U3;
+					end
+			endcase
+		end
+	1 : begin
+			case(R)
+				0 : begin	
+					State <= S0;
+					Y <= D1;
+					end
+				1 : begin
+					State <= S1;
+					Y <= K;
+					end
+				2 : begin
+					State <= S2;
+					Y <= U1;
+					end
+				3 : begin
+					State <= S3;
+					Y <= U2;
+					end
+			endcase
+		end
+	2 : begin
+			case(R)
+				0 : begin	
+					State <= S0;
+					Y <= D2;
+					end
+				1 : begin
+					State <= S1;
+					Y <= D1;
+					end
+				2 : begin
+					State <= S2;
+					Y <= K;
+					end
+				3 : begin
+					State <= S3;
+					Y <= U1;
+					end
+			endcase
+		end
+	3 : begin
+			case(R)
+				0 : begin	
+					State <= S0;
+					Y <= D3;
+					end
+				1 : begin
+					State <= S1;
+					Y <= D2;
+					end
+				2 : begin
+					State <= S2;
+					Y <= D1;
+					end
+				3 : begin
+					State <= S3;
+					Y <= K;
+					end
+			endcase
+		end
+endcase
+		

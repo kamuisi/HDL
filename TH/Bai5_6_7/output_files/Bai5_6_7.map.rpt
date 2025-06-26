@@ -1,0 +1,1460 @@
+Analysis & Synthesis report for Bai5_6_7
+Fri Jun 13 17:54:55 2025
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Registers Packed Into Inferred Megafunctions
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Source assignments for IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated
+ 15. Parameter Settings for Inferred Entity Instance: IO_Mem:mem_0|altsyncram:mem_rtl_0
+ 16. altsyncram Parameter Settings by Entity Instance
+ 17. Port Connectivity Checks: "pwm:pwm_0|register_we_0:r_Counter"
+ 18. Port Connectivity Checks: "gpio:gpio_0|register_we:reg_in"
+ 19. Port Connectivity Checks: "bus:bus_0|bus_mux:mux"
+ 20. Port Connectivity Checks: "bus:bus_0"
+ 21. Elapsed Time Per Partition
+ 22. Analysis & Synthesis Messages
+ 23. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri Jun 13 17:54:55 2025           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; Bai5_6_7                                        ;
+; Top-level Entity Name              ; SOC                                             ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; 853                                             ;
+;     Total combinational functions  ; 589                                             ;
+;     Dedicated logic registers      ; 311                                             ;
+; Total registers                    ; 311                                             ;
+; Total pins                         ; 35                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 262,160                                         ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                                      ; SOC                ; Bai5_6_7           ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                               ;
++----------------------------------+-----------------+---------------------------------------------+-------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                                   ; File Name with Absolute Path                                            ; Library ;
++----------------------------------+-----------------+---------------------------------------------+-------------------------------------------------------------------------+---------+
+; control_unit.v                   ; yes             ; User Verilog HDL File                       ; C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/control_unit.v                     ;         ;
+; register.v                       ; yes             ; User Verilog HDL File                       ; C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/register.v                         ;         ;
+; rom.v                            ; yes             ; User Verilog HDL File                       ; C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/rom.v                              ;         ;
+; register_file.v                  ; yes             ; User Verilog HDL File                       ; C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/register_file.v                    ;         ;
+; alu.v                            ; yes             ; User Verilog HDL File                       ; C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/alu.v                              ;         ;
+; mips.v                           ; yes             ; User Verilog HDL File                       ; C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/mips.v                             ;         ;
+; bus_mux.v                        ; yes             ; User Verilog HDL File                       ; C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/bus_mux.v                          ;         ;
+; bus_decoder.v                    ; yes             ; User Verilog HDL File                       ; C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/bus_decoder.v                      ;         ;
+; bus.v                            ; yes             ; User Verilog HDL File                       ; C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/bus.v                              ;         ;
+; gpio.v                           ; yes             ; User Verilog HDL File                       ; C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/gpio.v                             ;         ;
+; register_we.v                    ; yes             ; User Verilog HDL File                       ; C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/register_we.v                      ;         ;
+; pwm.v                            ; yes             ; User Verilog HDL File                       ; C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/pwm.v                              ;         ;
+; register_we_0.v                  ; yes             ; User Verilog HDL File                       ; C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/register_we_0.v                    ;         ;
+; IO_Mem.v                         ; yes             ; User Verilog HDL File                       ; C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/IO_Mem.v                           ;         ;
+; SOC.v                            ; yes             ; User Verilog HDL File                       ; C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/SOC.v                              ;         ;
+; program.hex                      ; yes             ; Auto-Found Hexadecimal (Intel-Format) File  ; C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/program.hex                        ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                                ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                                ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                                ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                                ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                                ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc        ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                                ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                       ; yes             ; Megafunction                                ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                       ; yes             ; Megafunction                                ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                                ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_25h1.tdf           ; yes             ; Auto-Generated Megafunction                 ; C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/db/altsyncram_25h1.tdf             ;         ;
+; db/decode_6oa.tdf                ; yes             ; Auto-Generated Megafunction                 ; C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/db/decode_6oa.tdf                  ;         ;
+; db/mux_3kb.tdf                   ; yes             ; Auto-Generated Megafunction                 ; C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/db/mux_3kb.tdf                     ;         ;
++----------------------------------+-----------------+---------------------------------------------+-------------------------------------------------------------------------+---------+
+
+
++------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary          ;
++---------------------------------------------+--------+
+; Resource                                    ; Usage  ;
++---------------------------------------------+--------+
+; Estimated Total logic elements              ; 853    ;
+;                                             ;        ;
+; Total combinational functions               ; 589    ;
+; Logic element usage by number of LUT inputs ;        ;
+;     -- 4 input functions                    ; 493    ;
+;     -- 3 input functions                    ; 54     ;
+;     -- <=2 input functions                  ; 42     ;
+;                                             ;        ;
+; Logic elements by mode                      ;        ;
+;     -- normal mode                          ; 557    ;
+;     -- arithmetic mode                      ; 32     ;
+;                                             ;        ;
+; Total registers                             ; 311    ;
+;     -- Dedicated logic registers            ; 311    ;
+;     -- I/O registers                        ; 0      ;
+;                                             ;        ;
+; I/O pins                                    ; 35     ;
+; Total memory bits                           ; 262160 ;
+; Embedded Multiplier 9-bit elements          ; 0      ;
+; Maximum fan-out node                        ; clk    ;
+; Maximum fan-out                             ; 391    ;
+; Total fan-out                               ; 4178   ;
+; Average fan-out                             ; 4.12   ;
++---------------------------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                             ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                      ; Library Name ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------+--------------+
+; |SOC                                      ; 589 (0)           ; 311 (0)      ; 262160      ; 0            ; 0       ; 0         ; 35   ; 0            ; |SOC                                                                                     ; work         ;
+;    |IO_Mem:mem_0|                         ; 54 (0)            ; 3 (0)        ; 262160      ; 0            ; 0       ; 0         ; 0    ; 0            ; |SOC|IO_Mem:mem_0                                                                        ; work         ;
+;       |altsyncram:mem_rtl_0|              ; 54 (0)            ; 3 (0)        ; 262160      ; 0            ; 0       ; 0         ; 0    ; 0            ; |SOC|IO_Mem:mem_0|altsyncram:mem_rtl_0                                                   ; work         ;
+;          |altsyncram_25h1:auto_generated| ; 54 (0)            ; 3 (3)        ; 262160      ; 0            ; 0       ; 0         ; 0    ; 0            ; |SOC|IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated                    ; work         ;
+;             |decode_6oa:decode2|          ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SOC|IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|decode_6oa:decode2 ; work         ;
+;             |mux_3kb:mux3|                ; 48 (48)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SOC|IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|mux_3kb:mux3       ; work         ;
+;    |bus:bus_0|                            ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SOC|bus:bus_0                                                                           ; work         ;
+;       |bus_decoder:decoder|               ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SOC|bus:bus_0|bus_decoder:decoder                                                       ; work         ;
+;    |gpio:gpio_0|                          ; 2 (2)             ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SOC|gpio:gpio_0                                                                         ; work         ;
+;       |register_we:reg_in|                ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SOC|gpio:gpio_0|register_we:reg_in                                                      ; work         ;
+;       |register_we:reg_out|               ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SOC|gpio:gpio_0|register_we:reg_out                                                     ; work         ;
+;    |mips:cpu_0|                           ; 512 (82)          ; 260 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SOC|mips:cpu_0                                                                          ; work         ;
+;       |alu:ALU|                           ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SOC|mips:cpu_0|alu:ALU                                                                  ; work         ;
+;       |control_unit:Control|              ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SOC|mips:cpu_0|control_unit:Control                                                     ; work         ;
+;       |register:pc_register|              ; 5 (5)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SOC|mips:cpu_0|register:pc_register                                                     ; work         ;
+;       |register_file:REG|                 ; 380 (380)         ; 256 (256)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SOC|mips:cpu_0|register_file:REG                                                        ; work         ;
+;       |rom:I_MEM|                         ; 23 (23)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SOC|mips:cpu_0|rom:I_MEM                                                                ; work         ;
+;    |pwm:pwm_0|                            ; 17 (9)            ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SOC|pwm:pwm_0                                                                           ; work         ;
+;       |register_we_0:r_Compare|           ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SOC|pwm:pwm_0|register_we_0:r_Compare                                                   ; work         ;
+;       |register_we_0:r_Counter|           ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SOC|pwm:pwm_0|register_we_0:r_Counter                                                   ; work         ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                  ;
++-----------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+------+
+; Name                                                                        ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size   ; MIF  ;
++-----------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+------+
+; IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 16385        ; 32           ; 16385        ; 32           ; 524320 ; None ;
++-----------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+------+
+
+
++------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                             ;
++-------------------------------------------+----------------------------------------------------+
+; Register name                             ; Reason for Removal                                 ;
++-------------------------------------------+----------------------------------------------------+
+; mips:cpu_0|register:pc_register|pc[0,1]   ; Lost fanout                                        ;
+; mips:cpu_0|register:pc_register|pc[2]     ; Merged with pwm:pwm_0|register_we_0:r_Counter|q[0] ;
+; mips:cpu_0|register:pc_register|pc[3]     ; Merged with pwm:pwm_0|register_we_0:r_Counter|q[1] ;
+; mips:cpu_0|register_file:REG|RF~512       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~513       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~514       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~515       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~516       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~517       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~518       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~519       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~520       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~521       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~522       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~523       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~524       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~525       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~526       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~527       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~528       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~529       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~530       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~531       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~532       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~533       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~534       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~535       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~536       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~537       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~538       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~539       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~540       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~541       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~542       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~543       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~544       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~545       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~546       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~547       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~548       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~549       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~550       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~551       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~552       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~553       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~554       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~555       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~556       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~557       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~558       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~559       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~560       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~561       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~562       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~563       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~564       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~565       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~566       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~567       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~568       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~569       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~570       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~571       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~572       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~573       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~574       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~575       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~576       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~577       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~578       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~579       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~580       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~581       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~582       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~583       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~584       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~585       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~586       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~587       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~588       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~589       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~590       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~591       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~592       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~593       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~594       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~595       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~596       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~597       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~598       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~599       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~600       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~601       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~602       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~603       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~604       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~605       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~606       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~607       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~608       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~609       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~610       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~611       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~612       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~613       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~614       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~615       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~616       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~617       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~618       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~619       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~620       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~621       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~622       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~623       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~624       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~625       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~626       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~627       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~628       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~629       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~630       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~631       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~632       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~633       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~634       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~635       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~636       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~637       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~638       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~639       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~640       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~641       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~642       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~643       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~644       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~645       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~646       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~647       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~648       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~649       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~650       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~651       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~652       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~653       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~654       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~655       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~656       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~657       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~658       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~659       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~660       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~661       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~662       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~663       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~664       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~665       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~666       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~667       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~668       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~669       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~670       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~671       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~672       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~673       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~674       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~675       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~676       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~677       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~678       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~679       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~680       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~681       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~682       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~683       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~684       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~685       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~686       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~687       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~688       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~689       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~690       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~691       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~692       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~693       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~694       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~695       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~696       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~697       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~698       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~699       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~700       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~701       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~702       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~703       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~704       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~705       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~706       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~707       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~708       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~709       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~710       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~711       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~712       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~713       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~714       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~715       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~716       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~717       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~718       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~719       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~720       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~721       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~722       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~723       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~724       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~725       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~726       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~727       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~728       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~729       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~730       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~731       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~732       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~733       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~734       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~735       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~736       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~737       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~738       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~739       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~740       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~741       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~742       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~743       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~744       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~745       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~746       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~747       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~748       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~749       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~750       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~751       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~752       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~753       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~754       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~755       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~756       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~757       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~758       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~759       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~760       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~761       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~762       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~763       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~764       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~765       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~766       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~767       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~768       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~769       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~770       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~771       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~772       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~773       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~774       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~775       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~776       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~777       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~778       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~779       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~780       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~781       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~782       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~783       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~784       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~785       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~786       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~787       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~788       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~789       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~790       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~791       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~792       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~793       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~794       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~795       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~796       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~797       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~798       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~799       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~800       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~801       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~802       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~803       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~804       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~805       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~806       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~807       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~808       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~809       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~810       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~811       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~812       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~813       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~814       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~815       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~816       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~817       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~818       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~819       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~820       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~821       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~822       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~823       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~824       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~825       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~826       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~827       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~828       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~829       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~830       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~831       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~832       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~833       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~834       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~835       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~836       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~837       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~838       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~839       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~840       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~841       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~842       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~843       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~844       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~845       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~846       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~847       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~848       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~849       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~850       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~851       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~852       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~853       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~854       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~855       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~856       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~857       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~858       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~859       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~860       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~861       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~862       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~863       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~864       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~865       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~866       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~867       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~868       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~869       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~870       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~871       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~872       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~873       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~874       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~875       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~876       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~877       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~878       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~879       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~880       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~881       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~882       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~883       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~884       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~885       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~886       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~887       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~888       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~889       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~890       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~891       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~892       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~893       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~894       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~895       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~896       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~897       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~898       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~899       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~900       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~901       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~902       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~903       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~904       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~905       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~906       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~907       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~908       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~909       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~910       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~911       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~912       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~913       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~914       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~915       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~916       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~917       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~918       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~919       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~920       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~921       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~922       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~923       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~924       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~925       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~926       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~927       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~928       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~929       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~930       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~931       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~932       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~933       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~934       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~935       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~936       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~937       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~938       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~939       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~940       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~941       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~942       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~943       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~944       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~945       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~946       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~947       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~948       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~949       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~950       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~951       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~952       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~953       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~954       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~955       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~956       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~957       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~958       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~959       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~960       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~961       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~962       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~963       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~964       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~965       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~966       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~967       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~968       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~969       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~970       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~971       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~972       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~973       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~974       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~975       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~976       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~977       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~978       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~979       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~980       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~981       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~982       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~983       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~984       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~985       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~986       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~987       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~988       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~989       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~990       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~991       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~992       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~993       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~994       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~995       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~996       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~997       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~998       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~999       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~1000      ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~1001      ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~1002      ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~1003      ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~1004      ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~1005      ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~1006      ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~1007      ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~1008      ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~1009      ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~1010      ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~1011      ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~1012      ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~1013      ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~1014      ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~1015      ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~1016      ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~1017      ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~1018      ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~1019      ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~1020      ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~1021      ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~1022      ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~1023      ; Lost fanout                                        ;
+; mips:cpu_0|register:pc_register|pc[8..31] ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~336       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~208       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~80        ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~464       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~176       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~304       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~48        ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~432       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~272       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~144       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~16        ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~400       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~240       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~368       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~112       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~496       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~305       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~337       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~273       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~369       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~209       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~177       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~145       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~241       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~49        ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~81        ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~17        ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~113       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~465       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~433       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~401       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~497       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~306       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~178       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~50        ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~434       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~210       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~338       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~82        ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~466       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~146       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~274       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~18        ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~402       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~370       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~242       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~114       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~498       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~179       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~211       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~147       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~243       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~339       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~307       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~275       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~371       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~83        ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~51        ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~19        ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~115       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~435       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~467       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~403       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~499       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~340       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~212       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~84        ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~468       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~180       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~308       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~52        ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~436       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~276       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~148       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~20        ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~404       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~244       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~372       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~116       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~500       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~309       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~341       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~277       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~373       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~213       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~181       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~149       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~245       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~53        ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~85        ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~21        ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~117       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~469       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~437       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~405       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~501       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~310       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~182       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~54        ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~438       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~214       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~342       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~86        ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~470       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~150       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~278       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~22        ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~406       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~374       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~246       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~118       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~502       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~183       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~215       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~151       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~247       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~343       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~311       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~279       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~375       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~87        ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~55        ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~23        ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~119       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~439       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~471       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~407       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~503       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~344       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~216       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~88        ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~472       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~184       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~312       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~56        ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~440       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~280       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~152       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~24        ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~408       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~248       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~376       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~120       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~504       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~313       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~345       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~281       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~377       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~217       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~185       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~153       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~249       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~57        ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~89        ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~25        ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~121       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~473       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~441       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~409       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~505       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~314       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~186       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~58        ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~442       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~218       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~346       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~90        ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~474       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~154       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~282       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~26        ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~410       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~378       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~250       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~122       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~506       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~187       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~219       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~155       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~251       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~347       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~315       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~283       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~379       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~91        ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~59        ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~27        ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~123       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~443       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~475       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~411       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~507       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~348       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~220       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~92        ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~476       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~188       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~316       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~60        ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~444       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~284       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~156       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~28        ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~412       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~252       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~380       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~124       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~508       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~317       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~349       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~285       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~381       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~221       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~189       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~157       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~253       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~61        ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~93        ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~29        ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~125       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~477       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~445       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~413       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~509       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~318       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~190       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~62        ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~446       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~222       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~350       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~94        ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~478       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~158       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~286       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~30        ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~414       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~382       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~254       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~126       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~510       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~191       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~223       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~159       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~255       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~351       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~319       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~287       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~383       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~95        ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~63        ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~31        ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~127       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~447       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~479       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~415       ; Lost fanout                                        ;
+; mips:cpu_0|register_file:REG|RF~511       ; Lost fanout                                        ;
+; Total Number of Removed Registers = 796   ;                                                    ;
++-------------------------------------------+----------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                       ;
++-------------------------------------+--------------------+----------------------------------------+
+; Register name                       ; Reason for Removal ; Registers Removed due to This Register ;
++-------------------------------------+--------------------+----------------------------------------+
+; mips:cpu_0|register_file:REG|RF~305 ; Lost Fanouts       ; mips:cpu_0|register_file:REG|RF~209    ;
+; mips:cpu_0|register_file:REG|RF~306 ; Lost Fanouts       ; mips:cpu_0|register_file:REG|RF~210    ;
+; mips:cpu_0|register_file:REG|RF~309 ; Lost Fanouts       ; mips:cpu_0|register_file:REG|RF~213    ;
+; mips:cpu_0|register_file:REG|RF~310 ; Lost Fanouts       ; mips:cpu_0|register_file:REG|RF~214    ;
+; mips:cpu_0|register_file:REG|RF~313 ; Lost Fanouts       ; mips:cpu_0|register_file:REG|RF~217    ;
+; mips:cpu_0|register_file:REG|RF~314 ; Lost Fanouts       ; mips:cpu_0|register_file:REG|RF~218    ;
+; mips:cpu_0|register_file:REG|RF~317 ; Lost Fanouts       ; mips:cpu_0|register_file:REG|RF~221    ;
+; mips:cpu_0|register_file:REG|RF~318 ; Lost Fanouts       ; mips:cpu_0|register_file:REG|RF~222    ;
++-------------------------------------+--------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 311   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 52    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 280   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions               ;
++----------------------------+------------------------+------+
+; Register Name              ; Megafunction           ; Type ;
++----------------------------+------------------------+------+
+; IO_Mem:mem_0|bRData[0..31] ; IO_Mem:mem_0|mem_rtl_0 ; RAM  ;
++----------------------------+------------------------+------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 9:1                ; 8 bits    ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; No         ; |SOC|mips:cpu_0|WD3[8]     ;
+; 9:1                ; 8 bits    ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; No         ; |SOC|mips:cpu_0|WD3[0]     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Source assignments for IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated ;
++---------------------------------+--------------------+------+---------------------------+
+; Assignment                      ; Value              ; From ; To                        ;
++---------------------------------+--------------------+------+---------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                         ;
++---------------------------------+--------------------+------+---------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: IO_Mem:mem_0|altsyncram:mem_rtl_0 ;
++------------------------------------+----------------------+------------------------+
+; Parameter Name                     ; Value                ; Type                   ;
++------------------------------------+----------------------+------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE         ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                ;
+; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                ;
+; WIDTH_A                            ; 32                   ; Untyped                ;
+; WIDTHAD_A                          ; 15                   ; Untyped                ;
+; NUMWORDS_A                         ; 16385                ; Untyped                ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                ;
+; WIDTH_B                            ; 32                   ; Untyped                ;
+; WIDTHAD_B                          ; 15                   ; Untyped                ;
+; NUMWORDS_B                         ; 16385                ; Untyped                ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                ;
+; ADDRESS_REG_B                      ; CLOCK0               ; Untyped                ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped                ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                ;
+; BYTE_SIZE                          ; 8                    ; Untyped                ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA             ; Untyped                ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                ;
+; INIT_FILE                          ; UNUSED               ; Untyped                ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped                ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                ;
+; DEVICE_FAMILY                      ; Cyclone II           ; Untyped                ;
+; CBXI_PARAMETER                     ; altsyncram_25h1      ; Untyped                ;
++------------------------------------+----------------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                              ;
++-------------------------------------------+-----------------------------------+
+; Name                                      ; Value                             ;
++-------------------------------------------+-----------------------------------+
+; Number of entity instances                ; 1                                 ;
+; Entity Instance                           ; IO_Mem:mem_0|altsyncram:mem_rtl_0 ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                         ;
+;     -- WIDTH_A                            ; 32                                ;
+;     -- NUMWORDS_A                         ; 16385                             ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                      ;
+;     -- WIDTH_B                            ; 32                                ;
+;     -- NUMWORDS_B                         ; 16385                             ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                            ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                      ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                              ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                          ;
++-------------------------------------------+-----------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "pwm:pwm_0|register_we_0:r_Counter"                                                                                                                                                  ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                                                            ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; we     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; we[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "gpio:gpio_0|register_we:reg_in"                                                                                                                                                     ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                                                            ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; we     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; we[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------+
+; Port Connectivity Checks: "bus:bus_0|bus_mux:mux" ;
++------+-------+----------+-------------------------+
+; Port ; Type  ; Severity ; Details                 ;
++------+-------+----------+-------------------------+
+; in3  ; Input ; Info     ; Stuck at GND            ;
+; in4  ; Input ; Info     ; Stuck at GND            ;
+; in5  ; Input ; Info     ; Stuck at GND            ;
++------+-------+----------+-------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "bus:bus_0"                                                                                ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; bSel[5..3] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:02     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Fri Jun 13 17:54:51 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Bai5_6_7 -c Bai5_6_7
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file control_unit.v
+    Info (12023): Found entity 1: control_unit
+Info (12021): Found 1 design units, including 1 entities, in source file register.v
+    Info (12023): Found entity 1: register
+Info (12021): Found 1 design units, including 1 entities, in source file rom.v
+    Info (12023): Found entity 1: rom
+Info (12021): Found 1 design units, including 1 entities, in source file register_file.v
+    Info (12023): Found entity 1: register_file
+Info (12021): Found 1 design units, including 1 entities, in source file ram.v
+    Info (12023): Found entity 1: ram
+Info (12021): Found 1 design units, including 1 entities, in source file alu.v
+    Info (12023): Found entity 1: alu
+Info (12021): Found 1 design units, including 1 entities, in source file mips.v
+    Info (12023): Found entity 1: mips
+Info (12021): Found 1 design units, including 1 entities, in source file bus_mux.v
+    Info (12023): Found entity 1: bus_mux
+Info (12021): Found 1 design units, including 1 entities, in source file bus_decoder.v
+    Info (12023): Found entity 1: bus_decoder
+Info (12021): Found 1 design units, including 1 entities, in source file bus.v
+    Info (12023): Found entity 1: bus
+Info (12021): Found 1 design units, including 1 entities, in source file gpio.v
+    Info (12023): Found entity 1: gpio
+Info (12021): Found 1 design units, including 1 entities, in source file register_we.v
+    Info (12023): Found entity 1: register_we
+Info (12021): Found 1 design units, including 1 entities, in source file pwm.v
+    Info (12023): Found entity 1: pwm
+Info (12021): Found 1 design units, including 1 entities, in source file register_we_0.v
+    Info (12023): Found entity 1: register_we_0
+Info (12021): Found 1 design units, including 1 entities, in source file io_mem.v
+    Info (12023): Found entity 1: IO_Mem
+Info (12021): Found 1 design units, including 1 entities, in source file soc.v
+    Info (12023): Found entity 1: SOC
+Info (12021): Found 1 design units, including 1 entities, in source file soc_tb.v
+    Info (12023): Found entity 1: soc_tb
+Info (12127): Elaborating entity "SOC" for the top level hierarchy
+Info (12128): Elaborating entity "mips" for hierarchy "mips:cpu_0"
+Warning (10230): Verilog HDL assignment warning at mips.v(43): truncated value with size 32 to match size of target (6)
+Info (12128): Elaborating entity "register" for hierarchy "mips:cpu_0|register:pc_register"
+Info (12128): Elaborating entity "rom" for hierarchy "mips:cpu_0|rom:I_MEM"
+Warning (10850): Verilog HDL warning at rom.v(9): number of words (23) in memory file does not match the number of elements in the address range [0:63]
+Warning (10030): Net "rom.data_a" at rom.v(6) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "rom.waddr_a" at rom.v(6) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "rom.we_a" at rom.v(6) has no driver or initial value, using a default initial value '0'
+Info (12128): Elaborating entity "register_file" for hierarchy "mips:cpu_0|register_file:REG"
+Info (12128): Elaborating entity "alu" for hierarchy "mips:cpu_0|alu:ALU"
+Info (12128): Elaborating entity "control_unit" for hierarchy "mips:cpu_0|control_unit:Control"
+Info (12128): Elaborating entity "bus" for hierarchy "bus:bus_0"
+Info (12128): Elaborating entity "bus_decoder" for hierarchy "bus:bus_0|bus_decoder:decoder"
+Info (12128): Elaborating entity "bus_mux" for hierarchy "bus:bus_0|bus_mux:mux"
+Info (12128): Elaborating entity "IO_Mem" for hierarchy "IO_Mem:mem_0"
+Info (12128): Elaborating entity "gpio" for hierarchy "gpio:gpio_0"
+Info (12128): Elaborating entity "register_we" for hierarchy "gpio:gpio_0|register_we:reg_in"
+Info (12128): Elaborating entity "pwm" for hierarchy "pwm:pwm_0"
+Warning (10230): Verilog HDL assignment warning at pwm.v(13): truncated value with size 32 to match size of target (8)
+Info (12128): Elaborating entity "register_we_0" for hierarchy "pwm:pwm_0|register_we_0:r_Compare"
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13049): Converted tri-state buffer "mips:cpu_0|control_unit:Control|ALUOp[3]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "mips:cpu_0|control_unit:Control|ALUOp[2]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "mips:cpu_0|control_unit:Control|ALUOp[1]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "mips:cpu_0|control_unit:Control|ALUOp[0]" feeding internal logic into a wire
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276007): RAM logic "mips:cpu_0|register_file:REG|RF" is uninferred due to asynchronous read logic
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/db/Bai5_6_7.ram0_rom_1d582.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Info (19000): Inferred 1 megafunctions from design logic
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "IO_Mem:mem_0|mem_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 32
+        Info (286033): Parameter WIDTHAD_A set to 15
+        Info (286033): Parameter NUMWORDS_A set to 16385
+        Info (286033): Parameter WIDTH_B set to 32
+        Info (286033): Parameter WIDTHAD_B set to 15
+        Info (286033): Parameter NUMWORDS_B set to 16385
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
+Info (12130): Elaborated megafunction instantiation "IO_Mem:mem_0|altsyncram:mem_rtl_0"
+Info (12133): Instantiated megafunction "IO_Mem:mem_0|altsyncram:mem_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "32"
+    Info (12134): Parameter "WIDTHAD_A" = "15"
+    Info (12134): Parameter "NUMWORDS_A" = "16385"
+    Info (12134): Parameter "WIDTH_B" = "32"
+    Info (12134): Parameter "WIDTHAD_B" = "15"
+    Info (12134): Parameter "NUMWORDS_B" = "16385"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_25h1.tdf
+    Info (12023): Found entity 1: altsyncram_25h1
+Info (12021): Found 1 design units, including 1 entities, in source file db/decode_6oa.tdf
+    Info (12023): Found entity 1: decode_6oa
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_3kb.tdf
+    Info (12023): Found entity 1: mux_3kb
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following RAM node(s):
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a16"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a17"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a18"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a19"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a20"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a21"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a22"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a23"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a24"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a25"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a26"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a27"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a28"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a29"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a30"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a31"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a48"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a49"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a50"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a51"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a52"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a53"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a54"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a55"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a56"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a57"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a58"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a59"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a60"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a61"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a62"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a63"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a80"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a81"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a82"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a83"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a84"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a85"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a86"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a87"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a88"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a89"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a90"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a91"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a92"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a93"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a94"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a95"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a112"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a113"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a114"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a115"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a116"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a117"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a118"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a119"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a120"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a121"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a122"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a123"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a124"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a125"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a126"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a127"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a144"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a145"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a146"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a147"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a148"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a149"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a150"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a151"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a152"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a153"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a154"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a155"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a156"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a157"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a158"
+        Warning (14320): Synthesized away node "IO_Mem:mem_0|altsyncram:mem_rtl_0|altsyncram_25h1:auto_generated|ram_block1a159"
+Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (17049): 794 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/output_files/Bai5_6_7.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 1003 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 18 input pins
+    Info (21059): Implemented 17 output pins
+    Info (21061): Implemented 888 logic cells
+    Info (21064): Implemented 80 RAM segments
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 96 warnings
+    Info: Peak virtual memory: 4615 megabytes
+    Info: Processing ended: Fri Jun 13 17:54:55 2025
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:03
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/output_files/Bai5_6_7.map.smsg.
+
+

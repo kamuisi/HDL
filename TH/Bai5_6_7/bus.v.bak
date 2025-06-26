@@ -1,0 +1,25 @@
+module bus
+(
+	input [31:0] bAddr,
+	input [] bRData0,
+	input [] bRData1,
+	input [] bRData2,
+	output [31:0] bRData
+);
+bus_decoder decoder
+(
+	.bAddr ( bAddr ),
+	.bSel ( bSel )
+);
+bus_mux mux
+(
+	.bSel ( bSel ),
+	.out ( bRData ),
+	.in0 ( bRData0 ),
+	.in1 ( bRData1 ),
+	.in2 ( bRData2 ),
+	.in3 ( 32'b0 ),
+	.in4 ( 32'b0 ),
+	.in5 ( 32'b0 )
+); 
+endmodule

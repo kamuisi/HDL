@@ -1,0 +1,17 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/SUS/Desktop/HDL/TH/Bai3/moore.v
+source_file = 1, C:/Users/SUS/Desktop/HDL/TH/Bai3/Waveform.vwf
+source_file = 1, C:/Users/SUS/Desktop/HDL/TH/Bai3/SRAM.v
+source_file = 1, C:/Users/SUS/Desktop/HDL/TH/Bai3/Waveform1.vwf
+source_file = 1, C:/Users/SUS/Desktop/HDL/TH/Bai3/mealy.v
+source_file = 1, C:/Users/SUS/Desktop/HDL/TH/Bai3/db/bai3.cbx.xml
+design_name = mealy
+instance = comp, \I~I , I, mealy, 1
+instance = comp, \clk~I , clk, mealy, 1
+instance = comp, \current_state.01~0 , current_state.01~0, mealy, 1
+instance = comp, \current_state.01 , current_state.01, mealy, 1
+instance = comp, \Selector2~0 , Selector2~0, mealy, 1
+instance = comp, \current_state.10 , current_state.10, mealy, 1
+instance = comp, \Y~0 , Y~0, mealy, 1
+instance = comp, \Y~reg0 , Y~reg0, mealy, 1
+instance = comp, \Y~I , Y, mealy, 1

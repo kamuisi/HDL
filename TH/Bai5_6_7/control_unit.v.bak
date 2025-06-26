@@ -1,0 +1,14 @@
+module control_unit
+(
+	input [5:0] opcode,
+	input [5:0] funct,
+	output reg condZero,
+	output reg branch,
+	output reg regWrite,
+	output reg [1:0] regDst,
+	output reg ALUSrc,
+	output reg [3:0] ALUOp,
+	output reg [1:0] pcSrc,
+	output reg memWrite,
+	output reg memToReg
+)

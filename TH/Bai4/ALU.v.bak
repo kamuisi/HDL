@@ -1,0 +1,28 @@
+module ALU(A, B, S, M, F, add_sub_overflow);
+input [0:31] A, B;
+input [0:1] S;
+input M;
+output [0:31] F;
+output add_sub_overflow;
+always @(*)
+case({M, S})
+	0: F = ~A;
+	1: F = A & B;
+	2: F = A ^ B;
+	3: F = A | B;
+	4: F = A - 1;
+	5: begin 
+		F = A + B;
+		add_sub_overflow = 0;
+		if((A[31] == B[31]) && (A[31] != F[31]))
+			add_sub_overflow = 1;
+		end
+	6: begin 
+		F = A - B;
+		add_sub_overflow = 0;
+		if((A[31] == B[31]) && (A[31] != F[31]))
+			add_sub_overflow = 1;
+		end
+	7: F = A + 1;
+endcase
+endmodule

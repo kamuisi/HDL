@@ -1,0 +1,106 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\SUS\Desktop\HDL\Doan\simulation\modelsim
+viDFT
+ImIlfjAb49^Dn@M_hSo9gz2
+V^05U7EU3z>3?cGLV39?Mg0
+Z1 dC:\Users\SUS\Desktop\HDL\Doan\simulation\modelsim
+w1746933496
+8C:/Users/SUS/Desktop/HDL/Doan/iDFT.v
+FC:/Users/SUS/Desktop/HDL/Doan/iDFT.v
+L0 1
+Z2 OV;L;10.1d;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+ni@d@f@t
+Z4 !s92 -vlog01compat -work work +incdir+C:/Users/SUS/Desktop/HDL/Doan -O0
+!i10b 1
+!s100 X;QTL;a6gV8Ic4ioiIzLd0
+!s85 0
+!s108 1747358744.250000
+!s107 C:/Users/SUS/Desktop/HDL/Doan/iDFT.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/SUS/Desktop/HDL/Doan|C:/Users/SUS/Desktop/HDL/Doan/iDFT.v|
+!s101 -O0
+vlocal_ram
+IWe:hBX0KzRHSb@cnQUhj`0
+VlTRo6:hLH`Y6[1YCUX9I;0
+R1
+w1746930919
+8C:/Users/SUS/Desktop/HDL/Doan/local_ram.v
+FC:/Users/SUS/Desktop/HDL/Doan/local_ram.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 MUKWK>6dmD[78zHgYZ1`L2
+!s85 0
+!s108 1747358744.644000
+!s107 C:/Users/SUS/Desktop/HDL/Doan/local_ram.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/SUS/Desktop/HDL/Doan|C:/Users/SUS/Desktop/HDL/Doan/local_ram.v|
+!s101 -O0
+vtop_module
+IB9nPRe^DlP>^[TVcR]QZE1
+VaDci<_VjKl0GN[Zb:@b@^3
+R1
+w1746930953
+8C:/Users/SUS/Desktop/HDL/Doan/top_module.v
+FC:/Users/SUS/Desktop/HDL/Doan/top_module.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 eB0YYCZO<R2A9Cf1SI7Q91
+!s85 0
+!s108 1747358744.702000
+!s107 C:/Users/SUS/Desktop/HDL/Doan/top_module.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/SUS/Desktop/HDL/Doan|C:/Users/SUS/Desktop/HDL/Doan/top_module.v|
+!s101 -O0
+vtop_module_tb
+!i10b 1
+!s100 AfgJ@RLgmJ;Jg5JTdclIL3
+I1f=g]oggbm3lhPVG1_<=>2
+VJAh>hbgVNE8Z;_;7L0NT>0
+R1
+w1746933706
+8C:/Users/SUS/Desktop/HDL/Doan/top_module_tb.v
+FC:/Users/SUS/Desktop/HDL/Doan/top_module_tb.v
+L0 3
+R2
+r1
+!s85 0
+31
+!s108 1747358744.774000
+!s107 C:/Users/SUS/Desktop/HDL/Doan/top_module_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/SUS/Desktop/HDL/Doan|C:/Users/SUS/Desktop/HDL/Doan/top_module_tb.v|
+!s101 -O0
+R3
+R4
+vwishbone_slave
+I@8fZ6Y4C<4DF;>ni1YcID2
+Vk`7L9>l68jFd6MX>K__YY3
+R1
+w1746933650
+8C:/Users/SUS/Desktop/HDL/Doan/wishbone_slave.v
+FC:/Users/SUS/Desktop/HDL/Doan/wishbone_slave.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 KfVJ2IAB@N]NR^JEk6]C10
+!s85 0
+!s108 1747358744.587000
+!s107 C:/Users/SUS/Desktop/HDL/Doan/wishbone_slave.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/SUS/Desktop/HDL/Doan|C:/Users/SUS/Desktop/HDL/Doan/wishbone_slave.v|
+!s101 -O0

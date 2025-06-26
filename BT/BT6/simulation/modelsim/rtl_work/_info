@@ -1,0 +1,47 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\SUS\Desktop\HDL\BT\BT6\simulation\modelsim
+vBT6
+Ie2L?P5ORDIz>FKcOdQU>73
+V7naaVYkD6SOG_=difamPE3
+Z1 dC:\Users\SUS\Desktop\HDL\BT\BT6\simulation\modelsim
+w1743410489
+8C:/Users/SUS/Desktop/HDL/BT/BT6/BT6.v
+FC:/Users/SUS/Desktop/HDL/BT/BT6/BT6.v
+L0 1
+Z2 OV;L;10.1d;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+n@b@t6
+!i10b 1
+!s100 1^ff8O=4nKg_:5_belEmV2
+!s85 0
+!s108 1743410578.379000
+!s107 C:/Users/SUS/Desktop/HDL/BT/BT6/BT6.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/SUS/Desktop/HDL/BT/BT6|C:/Users/SUS/Desktop/HDL/BT/BT6/BT6.v|
+!s101 -O0
+Z4 !s92 -vlog01compat -work work +incdir+C:/Users/SUS/Desktop/HDL/BT/BT6 -O0
+vBT6_tb
+!i10b 1
+!s100 50PjBeJJLGijRkY<?4[4g0
+IO7T3OLI7hdG11SRNa_`]b1
+Vb^HIWfeXM2G3;];nQYWcE3
+R1
+w1743410534
+8C:/Users/SUS/Desktop/HDL/BT/BT6/BT6_tb.v
+FC:/Users/SUS/Desktop/HDL/BT/BT6/BT6_tb.v
+L0 3
+R2
+r1
+!s85 0
+31
+!s108 1743410578.436000
+!s107 C:/Users/SUS/Desktop/HDL/BT/BT6/BT6_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/SUS/Desktop/HDL/BT/BT6|C:/Users/SUS/Desktop/HDL/BT/BT6/BT6_tb.v|
+!s101 -O0
+R3
+R4
+n@b@t6_tb

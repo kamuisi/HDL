@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Jun 13 17:54:55 2025
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Revision Name : Bai5_6_7
+Top-level Entity Name : SOC
+Family : Cyclone II
+Total logic elements : 853
+    Total combinational functions : 589
+    Dedicated logic registers : 311
+Total registers : 311
+Total pins : 35
+Total virtual pins : 0
+Total memory bits : 262,160
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

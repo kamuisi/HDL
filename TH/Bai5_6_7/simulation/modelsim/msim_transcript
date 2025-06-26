@@ -1,0 +1,144 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do Bai5_6_7_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7 {C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/control_unit.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module control_unit
+# 
+# Top level modules:
+# 	control_unit
+# vlog -vlog01compat -work work +incdir+C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7 {C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/register.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module register
+# 
+# Top level modules:
+# 	register
+# vlog -vlog01compat -work work +incdir+C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7 {C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/register_file.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module register_file
+# 
+# Top level modules:
+# 	register_file
+# vlog -vlog01compat -work work +incdir+C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7 {C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/alu.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# vlog -vlog01compat -work work +incdir+C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7 {C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/mips.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips
+# 
+# Top level modules:
+# 	mips
+# vlog -vlog01compat -work work +incdir+C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7 {C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/bus_mux.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module bus_mux
+# 
+# Top level modules:
+# 	bus_mux
+# vlog -vlog01compat -work work +incdir+C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7 {C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/bus_decoder.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module bus_decoder
+# 
+# Top level modules:
+# 	bus_decoder
+# vlog -vlog01compat -work work +incdir+C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7 {C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/bus.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module bus
+# 
+# Top level modules:
+# 	bus
+# vlog -vlog01compat -work work +incdir+C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7 {C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/gpio.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module gpio
+# 
+# Top level modules:
+# 	gpio
+# vlog -vlog01compat -work work +incdir+C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7 {C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/register_we.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module register_we
+# 
+# Top level modules:
+# 	register_we
+# vlog -vlog01compat -work work +incdir+C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7 {C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/pwm.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module pwm
+# 
+# Top level modules:
+# 	pwm
+# vlog -vlog01compat -work work +incdir+C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7 {C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/register_we_0.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module register_we_0
+# 
+# Top level modules:
+# 	register_we_0
+# vlog -vlog01compat -work work +incdir+C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7 {C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/IO_Mem.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module IO_Mem
+# 
+# Top level modules:
+# 	IO_Mem
+# vlog -vlog01compat -work work +incdir+C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7 {C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/SOC.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module SOC
+# 
+# Top level modules:
+# 	SOC
+# vlog -vlog01compat -work work +incdir+C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7 {C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/rom.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module rom
+# 
+# Top level modules:
+# 	rom
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7 {C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/soc_tb.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module soc_tb
+# 
+# Top level modules:
+# 	soc_tb
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L rtl_work -L work -voptargs="+acc"  soc_tb
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps soc_tb 
+# Loading work.soc_tb
+# Loading work.SOC
+# Loading work.mips
+# Loading work.register
+# Loading work.rom
+# Loading work.register_file
+# Loading work.alu
+# Loading work.control_unit
+# Loading work.bus
+# Loading work.bus_decoder
+# Loading work.bus_mux
+# Loading work.IO_Mem
+# Loading work.gpio
+# Loading work.register_we
+# Loading work.pwm
+# Loading work.register_we_0
+# ** Warning: (vsim-3015) C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/gpio.v(18): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'we'. The port definition is at: C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/register_we.v(5).
+# 
+#         Region: /soc_tb/blabla/gpio_0/reg_in
+# ** Warning: (vsim-3015) C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/pwm.v(18): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'we'. The port definition is at: C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/register_we_0.v(5).
+# 
+#         Region: /soc_tb/blabla/pwm_0/r_Counter
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Break in Module soc_tb at C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/soc_tb.v line 29
+# Simulation Breakpoint: Break in Module soc_tb at C:/Users/SUS/Desktop/HDL/TH/Bai5_6_7/soc_tb.v line 29
+# MACRO ./Bai5_6_7_run_msim_rtl_verilog.do PAUSED at line 31

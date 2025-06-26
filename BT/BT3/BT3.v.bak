@@ -1,0 +1,12 @@
+module BT3(input A, B, C, clk, rst, output Q);
+wire [7:0] w;
+wire a0, a1, a2;
+decode3to8 (A, B, C, w);
+
+or (a0, w[7], w[6]);
+and (a1, w[4], ~w[3]);
+
+mux4 (a0, w[5], a1, w[2], w[0], w[1], a2);
+
+t_ff (clk, rst, a2, Q);
+endmodule

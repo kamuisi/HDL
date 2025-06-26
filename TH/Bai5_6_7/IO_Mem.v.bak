@@ -1,0 +1,11 @@
+module IO_Mem
+(
+	input [31:0] bAddress,
+	input [31:0] bSel,
+	input bWrite,
+	input [31:0] bWData,
+	output [31:0] bRData0,
+	output [31:0] bRData1,
+	output [31:0] bRData2
+);
+

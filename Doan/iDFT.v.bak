@@ -1,0 +1,89 @@
+module iDFT (
+    input clk,
+    input rst,
+    input start,
+    input [63:0] X_real_bus,
+    input [63:0] X_imag_bus,
+    output reg [63:0] x_real_bus,
+    output reg [63:0] x_imag_bus,
+    output reg done
+);
+
+    integer k, n, idx;
+
+    reg signed [15:0] X_real [0:3];
+    reg signed [15:0] X_imag [0:3];
+
+    reg signed [15:0] W_real [0:15];
+    reg signed [15:0] W_imag [0:15];
+
+    reg signed [31:0] sum_real [0:3];
+    reg signed [31:0] sum_imag [0:3];
+
+    reg [3:0] state;
+
+    initial begin
+        W_real[ 0] = 1024; W_imag[ 0] = 0;
+        W_real[ 1] = 1024; W_imag[ 1] = 0;
+        W_real[ 2] = 1024; W_imag[ 2] = 0;
+        W_real[ 3] = 1024; W_imag[ 3] = 0;
+
+        W_real[ 4] = 1024; W_imag[ 4] = 0;
+        W_real[ 5] = 0;    W_imag[ 5] = 1024;
+        W_real[ 6] = -1024;W_imag[ 6] = 0;
+        W_real[ 7] = 0;    W_imag[ 7] = -1024;
+
+        W_real[ 8] = 1024; W_imag[ 8] = 0;
+        W_real[ 9] = -1024;W_imag[ 9] = 0;
+        W_real[10] = 1024; W_imag[10] = 0;
+        W_real[11] = -1024;W_imag[11] = 0;
+
+        W_real[12] = 1024; W_imag[12] = 0;
+        W_real[13] = 0;    W_imag[13] = -1024;
+        W_real[14] = -1024;W_imag[14] = 0;
+        W_real[15] = 0;    W_imag[15] = 1024;
+    end
+
+    always @(posedge clk or posedge rst) begin
+        if (rst) begin
+            done <= 0;
+            state <= 0;
+        end else begin
+            case (state)
+                0: begin
+                    if (start) begin
+                        for (n = 0; n < 4; n = n + 1) begin
+                            X_real[n] <= X_real_bus[n*16 +: 16];
+                            X_imag[n] <= X_imag_bus[n*16 +: 16];
+                            sum_real[n] <= 0;
+                            sum_imag[n] <= 0;
+                        end
+                        k <= 0;
+                        state <= 1;
+                        done <= 0;
+                    end
+                end
+                1: begin
+                    if (k < 4) begin
+                        for (n = 0; n < 4; n = n + 1) begin
+                            idx = k * 4 + n;
+                            sum_real[n] <= sum_real[n] + ((X_real[k] * W_real[idx] - X_imag[k] * W_imag[idx]) >>> 10);
+                            sum_imag[n] <= sum_imag[n] + ((X_real[k] * W_imag[idx] + X_imag[k] * W_real[idx]) >>> 10);
+                        end
+                        k <= k + 1;
+                    end else begin
+                        for (n = 0; n < 4; n = n + 1) begin
+                            x_real_bus[n*16 +: 16] <= sum_real[n] >>> 2;
+                            x_imag_bus[n*16 +: 16] <= sum_imag[n] >>> 2;
+                        end
+                        done <= 1;
+                        state <= 2;
+                    end
+                end
+                2: begin
+                    if (!start) state <= 0;
+                end
+            endcase
+        end
+    end
+endmodule

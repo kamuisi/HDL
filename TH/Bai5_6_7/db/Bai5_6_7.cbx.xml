@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="Bai5_6_7">
+		<CBX_INST_ENTRY INSTANCE_NAME="|SOC|IO_Mem:mem_0|altsyncram:mem_rtl_0" CBX_FILE_NAME="altsyncram_25h1.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

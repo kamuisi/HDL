@@ -1,0 +1,14 @@
+module ram
+(
+	input clk,
+	input [31:0] a,
+	input we,
+	input wd,
+	output [31:0] rd
+);
+	reg [31:0] ram [64 - 1:0];
+	assign rd = ram [a[31:2]];
+	always @(posedge clk)
+		if (we)
+			ram[a[31:2]] <= wd; 
+endmodule

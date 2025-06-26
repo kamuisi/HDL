@@ -1,0 +1,7 @@
+module bt1(input A, B, C, D output Y);
+wire and_out, or_out, xor_out;
+assign and_out = A&B;
+assign xor_out = C^D;
+assign or_out = and_out | C;
+assign Y = (C) ? xor_out : or_out;
+endmodule

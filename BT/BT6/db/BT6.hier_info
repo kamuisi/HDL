@@ -1,0 +1,15 @@
+|BT6
+R[0] => Decoder0.IN1
+R[0] => Selector2.IN3
+R[1] => Decoder0.IN0
+R[1] => Selector1.IN3
+R[1] => Selector0.IN2
+Y[0] <= Y[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= Y[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= Y[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk => Y[0]~reg0.CLK
+clk => Y[1]~reg0.CLK
+clk => Y[2]~reg0.CLK
+clk => State~1.DATAIN
+
+

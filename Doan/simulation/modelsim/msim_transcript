@@ -1,0 +1,644 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# ERROR: No extended dataflow license exists
+# do Doan_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/SUS/Desktop/HDL/Doan {C:/Users/SUS/Desktop/HDL/Doan/iDFT.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module iDFT
+# 
+# Top level modules:
+# 	iDFT
+# vlog -vlog01compat -work work +incdir+C:/Users/SUS/Desktop/HDL/Doan {C:/Users/SUS/Desktop/HDL/Doan/wishbone_slave.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module wishbone_slave
+# 
+# Top level modules:
+# 	wishbone_slave
+# vlog -vlog01compat -work work +incdir+C:/Users/SUS/Desktop/HDL/Doan {C:/Users/SUS/Desktop/HDL/Doan/local_ram.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module local_ram
+# 
+# Top level modules:
+# 	local_ram
+# vlog -vlog01compat -work work +incdir+C:/Users/SUS/Desktop/HDL/Doan {C:/Users/SUS/Desktop/HDL/Doan/top_module.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module top_module
+# 
+# Top level modules:
+# 	top_module
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/SUS/Desktop/HDL/Doan {C:/Users/SUS/Desktop/HDL/Doan/top_module_tb.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module top_module_tb
+# 
+# Top level modules:
+# 	top_module_tb
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L rtl_work -L work -voptargs="+acc"  top_module_tb
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps top_module_tb 
+# Loading work.top_module_tb
+# Loading work.top_module
+# Loading work.wishbone_slave
+# Loading work.iDFT
+# Loading work.local_ram
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# 
+# --- GHI DU LIEU VAO MAU 0 ---
+# [MAU 0] Ghi X_real[0] = 301
+# [MAU 0] Ghi X_imag[0] = 710
+# [MAU 0] Ghi X_real[1] = 343
+# [MAU 0] Ghi X_imag[1] = -243
+# [MAU 0] Ghi X_real[2] = -937
+# [MAU 0] Ghi X_imag[2] = -588
+# [MAU 0] Ghi X_real[3] = -315
+# [MAU 0] Ghi X_imag[3] = -669
+# [MAU 0] Ghi X_real[4] = 759
+# [MAU 0] Ghi X_imag[4] = 173
+# [MAU 0] Ghi X_real[5] = -909
+# [MAU 0] Ghi X_imag[5] = 124
+# [MAU 0] Ghi X_real[6] = -806
+# [MAU 0] Ghi X_imag[6] = -616
+# [MAU 0] Ghi X_real[7] = 212
+# [MAU 0] Ghi X_imag[7] = 931
+# 
+# --- KET QUA MAU 0 ---
+# Idx    | In_Real      | In_Imag      || Out_Real     | Out_Imag     | Complex
+# 0      | 301          | 710          || -169         | -23          | -169 + j-23
+# 1      | 343          | -243         || 270          | 223          | 270 + j223
+# 2      | -937         | -588         || 398          | 203          | 398 + j203
+# 3      | -315         | -669         || -38          | 38           | -38 + j38
+# 4      | 759          | 173          || -2           | -58          | -2 + j-58
+# 5      | -909         | 124          || -393         | -123         | -393 + j-123
+# 6      | -806         | -616         || 302          | 318          | 302 + j318
+# 7      | 212          | 931          || -71          | 128          | -71 + j128
+# 
+# --- GHI DU LIEU VAO MAU 1 ---
+# [MAU 1] Ghi X_real[0] = -371
+# [MAU 1] Ghi X_imag[0] = -592
+# [MAU 1] Ghi X_real[1] = -559
+# [MAU 1] Ghi X_imag[1] = 931
+# [MAU 1] Ghi X_real[2] = 306
+# [MAU 1] Ghi X_imag[2] = -347
+# [MAU 1] Ghi X_real[3] = -209
+# [MAU 1] Ghi X_imag[3] = -1
+# [MAU 1] Ghi X_real[4] = -979
+# [MAU 1] Ghi X_imag[4] = 398
+# [MAU 1] Ghi X_real[5] = -757
+# [MAU 1] Ghi X_imag[5] = 213
+# [MAU 1] Ghi X_real[6] = -750
+# [MAU 1] Ghi X_imag[6] = -196
+# [MAU 1] Ghi X_real[7] = 517
+# [MAU 1] Ghi X_imag[7] = 321
+# 
+# --- KET QUA MAU 1 ---
+# Idx    | In_Real      | In_Imag      || Out_Real     | Out_Imag     | Complex
+# 0      | -371         | -592         || -351         | 90           | -351 + j90
+# 1      | -559         | 931          || 141          | 53           | 141 + j53
+# 2      | 306          | -347         || -217         | -160         | -217 + j-160
+# 3      | -209         | -1           || -60          | -395         | -60 + j-395
+# 4      | -979         | 398          || -99          | -276         | -99 + j-276
+# 5      | -757         | 213          || 48           | -38          | 48 + j-38
+# 6      | -750         | -196         || -11          | 246          | -11 + j246
+# 7      | 517          | 321          || 173          | -118         | 173 + j-118
+# 
+# --- GHI DU LIEU VAO MAU 2 ---
+# [MAU 2] Ghi X_real[0] = 102
+# [MAU 2] Ghi X_imag[0] = -789
+# [MAU 2] Ghi X_real[1] = -551
+# [MAU 2] Ghi X_imag[1] = -467
+# [MAU 2] Ghi X_real[2] = -660
+# [MAU 2] Ghi X_imag[2] = 312
+# [MAU 2] Ghi X_real[3] = -35
+# [MAU 2] Ghi X_imag[3] = 581
+# [MAU 2] Ghi X_real[4] = -6
+# [MAU 2] Ghi X_imag[4] = 569
+# [MAU 2] Ghi X_real[5] = 798
+# [MAU 2] Ghi X_imag[5] = 554
+# [MAU 2] Ghi X_real[6] = 549
+# [MAU 2] Ghi X_imag[6] = 864
+# [MAU 2] Ghi X_real[7] = -10
+# [MAU 2] Ghi X_imag[7] = -268
+# 
+# --- KET QUA MAU 2 ---
+# Idx    | In_Real      | In_Imag      || Out_Real     | Out_Imag     | Complex
+# 0      | 102          | -789         || 23           | 169          | 23 + j169
+# 1      | -551         | -467         || -20          | -608         | -20 + j-608
+# 2      | -660         | 312          || 54           | -138         | 54 + j-138
+# 3      | -35          | 581          || 76           | 25           | 76 + j25
+# 4      | -6           | 569          || -28          | 69           | -28 + j69
+# 5      | 798          | 554          || 184          | -35          | 184 + j-35
+# 6      | 549          | 864          || -3           | -211         | -3 + j-211
+# 7      | -10          | -268         || -188         | -63          | -188 + j-63
+# 
+# --- GHI DU LIEU VAO MAU 3 ---
+# [MAU 3] Ghi X_real[0] = 508
+# [MAU 3] Ghi X_imag[0] = -649
+# [MAU 3] Ghi X_real[1] = -106
+# [MAU 3] Ghi X_imag[1] = -902
+# [MAU 3] Ghi X_real[2] = -286
+# [MAU 3] Ghi X_imag[2] = 309
+# [MAU 3] Ghi X_real[3] = -241
+# [MAU 3] Ghi X_imag[3] = 718
+# [MAU 3] Ghi X_real[4] = 528
+# [MAU 3] Ghi X_imag[4] = -482
+# [MAU 3] Ghi X_real[5] = 615
+# [MAU 3] Ghi X_imag[5] = -508
+# [MAU 3] Ghi X_real[6] = -504
+# [MAU 3] Ghi X_imag[6] = -903
+# [MAU 3] Ghi X_real[7] = -523
+# [MAU 3] Ghi X_imag[7] = -673
+# 
+# --- KET QUA MAU 3 ---
+# Idx    | In_Real      | In_Imag      || Out_Real     | Out_Imag     | Complex
+# 0      | 508          | -649         || -2           | -387         | -2 + j-387
+# 1      | -106         | -902         || -331         | -191         | -331 + j-191
+# 2      | -286         | 309          || 410          | 92           | 410 + j92
+# 3      | -241         | 718          || 149          | 70           | 149 + j70
+# 4      | 528          | -482         || 62           | -45          | 62 + j-45
+# 5      | 615          | -508         || 22           | 202          | 22 + j202
+# 6      | -504         | -903         || 46           | -227         | 46 + j-227
+# 7      | -523         | -673         || 148          | -168         | 148 + j-168
+# 
+# --- GHI DU LIEU VAO MAU 4 ---
+# [MAU 4] Ghi X_real[0] = 206
+# [MAU 4] Ghi X_imag[0] = 972
+# [MAU 4] Ghi X_real[1] = 762
+# [MAU 4] Ghi X_imag[1] = 698
+# [MAU 4] Ghi X_real[2] = 952
+# [MAU 4] Ghi X_imag[2] = 926
+# [MAU 4] Ghi X_real[3] = 778
+# [MAU 4] Ghi X_imag[3] = 625
+# [MAU 4] Ghi X_real[4] = -881
+# [MAU 4] Ghi X_imag[4] = 509
+# [MAU 4] Ghi X_real[5] = 346
+# [MAU 4] Ghi X_imag[5] = -504
+# [MAU 4] Ghi X_real[6] = -139
+# [MAU 4] Ghi X_imag[6] = 725
+# [MAU 4] Ghi X_real[7] = -755
+# [MAU 4] Ghi X_imag[7] = -882
+# 
+# --- KET QUA MAU 4 ---
+# Idx    | In_Real      | In_Imag      || Out_Real     | Out_Imag     | Complex
+# 0      | 206          | 972          || 158          | 383          | 158 + j383
+# 1      | 762          | 698          || -228         | 339          | -228 + j339
+# 2      | 952          | 926          || -243         | 114          | -243 + j114
+# 3      | 778          | 625          || 20           | 120          | 20 + j120
+# 4      | -881         | 509          || -125         | 399          | -125 + j399
+# 5      | 346          | -504         || 448          | 48           | 448 + j48
+# 6      | -139         | 725          || -130         | -157         | -130 + j-157
+# 7      | -755         | -882         || 301          | -278         | 301 + j-278
+# 
+# --- GHI DU LIEU VAO MAU 5 ---
+# [MAU 5] Ghi X_real[0] = -937
+# [MAU 5] Ghi X_imag[0] = 460
+# [MAU 5] Ghi X_real[1] = -266
+# [MAU 5] Ghi X_imag[1] = 1
+# [MAU 5] Ghi X_real[2] = 778
+# [MAU 5] Ghi X_imag[2] = -578
+# [MAU 5] Ghi X_real[3] = 375
+# [MAU 5] Ghi X_imag[3] = -733
+# [MAU 5] Ghi X_real[4] = -960
+# [MAU 5] Ghi X_imag[4] = -109
+# [MAU 5] Ghi X_real[5] = -265
+# [MAU 5] Ghi X_imag[5] = -928
+# [MAU 5] Ghi X_real[6] = 776
+# [MAU 5] Ghi X_imag[6] = -723
+# [MAU 5] Ghi X_real[7] = -476
+# [MAU 5] Ghi X_imag[7] = 46
+# 
+# --- KET QUA MAU 5 ---
+# Idx    | In_Real      | In_Imag      || Out_Real     | Out_Imag     | Complex
+# 0      | -937         | 460          || -122         | -321         | -122 + j-321
+# 1      | -266         | 1            || -104         | 297          | -104 + j297
+# 2      | 778          | -578         || -402         | 152          | -402 + j152
+# 3      | 375          | -733         || 82           | -6           | 82 + j-6
+# 4      | -960         | -109         || 36           | 83           | 36 + j83
+# 5      | -265         | -928         || 73           | -155         | 73 + j-155
+# 6      | 776          | -723         || -462         | 260          | -462 + j260
+# 7      | -476         | 46           || -42          | 146          | -42 + j146
+# 
+# --- GHI DU LIEU VAO MAU 6 ---
+# [MAU 6] Ghi X_real[0] = 76
+# [MAU 6] Ghi X_imag[0] = 747
+# [MAU 6] Ghi X_real[1] = -247
+# [MAU 6] Ghi X_imag[1] = -713
+# [MAU 6] Ghi X_real[2] = -662
+# [MAU 6] Ghi X_imag[2] = 347
+# [MAU 6] Ghi X_real[3] = 441
+# [MAU 6] Ghi X_imag[3] = 406
+# [MAU 6] Ghi X_real[4] = 427
+# [MAU 6] Ghi X_imag[4] = 747
+# [MAU 6] Ghi X_real[5] = -191
+# [MAU 6] Ghi X_imag[5] = -539
+# [MAU 6] Ghi X_real[6] = -275
+# [MAU 6] Ghi X_imag[6] = 515
+# [MAU 6] Ghi X_real[7] = -180
+# [MAU 6] Ghi X_imag[7] = -67
+# 
+# --- KET QUA MAU 6 ---
+# Idx    | In_Real      | In_Imag      || Out_Real     | Out_Imag     | Complex
+# 0      | 76           | 747          || -77          | 180          | -77 + j180
+# 1      | -247         | -713         || -110         | -56          | -110 + j-56
+# 2      | -662         | 347          || 378          | -9           | 378 + j-9
+# 3      | 441          | 406          || -32          | 155          | -32 + j155
+# 4      | 427          | 747          || -33          | 408          | -33 + j408
+# 5      | -191         | -539         || 63           | -42          | 63 + j-42
+# 6      | -275         | 515          || -19          | 166          | -19 + j166
+# 7      | -180         | -67          || -99          | -59          | -99 + j-59
+# 
+# --- GHI DU LIEU VAO MAU 7 ---
+# [MAU 7] Ghi X_real[0] = 841
+# [MAU 7] Ghi X_imag[0] = -498
+# [MAU 7] Ghi X_real[1] = -245
+# [MAU 7] Ghi X_imag[1] = 517
+# [MAU 7] Ghi X_real[2] = 428
+# [MAU 7] Ghi X_imag[2] = 348
+# [MAU 7] Ghi X_real[3] = 472
+# [MAU 7] Ghi X_imag[3] = 977
+# [MAU 7] Ghi X_real[4] = 983
+# [MAU 7] Ghi X_imag[4] = -372
+# [MAU 7] Ghi X_real[5] = -120
+# [MAU 7] Ghi X_imag[5] = -642
+# [MAU 7] Ghi X_real[6] = -195
+# [MAU 7] Ghi X_imag[6] = 330
+# [MAU 7] Ghi X_real[7] = -911
+# [MAU 7] Ghi X_imag[7] = -50
+# 
+# --- KET QUA MAU 7 ---
+# Idx    | In_Real      | In_Imag      || Out_Real     | Out_Imag     | Complex
+# 0      | 841          | -498         || 156          | 76           | 156 + j76
+# 1      | -245         | 517          || -347         | 184          | -347 + j184
+# 2      | 428          | 348          || 330          | -185         | 330 + j-185
+# 3      | 472          | 977          || -76          | 5            | -76 + j5
+# 4      | 983          | -372         || 357          | -125         | 357 + j-125
+# 5      | -120         | -642         || 306          | -61          | 306 + j-61
+# 6      | -195         | 330          || 67           | -203         | 67 + j-203
+# 7      | -911         | -50          || 44           | -194         | 44 + j-194
+# 
+# --- GHI DU LIEU VAO MAU 8 ---
+# [MAU 8] Ghi X_real[0] = -895
+# [MAU 8] Ghi X_imag[0] = 132
+# [MAU 8] Ghi X_real[1] = -581
+# [MAU 8] Ghi X_imag[1] = 887
+# [MAU 8] Ghi X_real[2] = 249
+# [MAU 8] Ghi X_imag[2] = -329
+# [MAU 8] Ghi X_real[3] = 743
+# [MAU 8] Ghi X_imag[3] = 233
+# [MAU 8] Ghi X_real[4] = -276
+# [MAU 8] Ghi X_imag[4] = 700
+# [MAU 8] Ghi X_real[5] = 591
+# [MAU 8] Ghi X_imag[5] = 164
+# [MAU 8] Ghi X_real[6] = -701
+# [MAU 8] Ghi X_imag[6] = 623
+# [MAU 8] Ghi X_real[7] = 421
+# [MAU 8] Ghi X_imag[7] = -10
+# 
+# --- KET QUA MAU 8 ---
+# Idx    | In_Real      | In_Imag      || Out_Real     | Out_Imag     | Complex
+# 0      | -895         | 132          || -57          | 300          | -57 + j300
+# 1      | -581         | 887          || -176         | 14           | -176 + j14
+# 2      | 249          | -329         || -194         | -77          | -194 + j-77
+# 3      | 743          | 233          || -150         | -308         | -150 + j-308
+# 4      | -276         | 700          || -350         | -19          | -350 + j-19
+# 5      | 591          | 164          || 258          | 80           | 258 + j80
+# 6      | -701         | 623          || 13           | 211          | 13 + j211
+# 7      | 421          | -10          || -244         | -73          | -244 + j-73
+# 
+# --- GHI DU LIEU VAO MAU 9 ---
+# [MAU 9] Ghi X_real[0] = 87
+# [MAU 9] Ghi X_imag[0] = -763
+# [MAU 9] Ghi X_real[1] = 518
+# [MAU 9] Ghi X_imag[1] = 735
+# [MAU 9] Ghi X_real[2] = 484
+# [MAU 9] Ghi X_imag[2] = 631
+# [MAU 9] Ghi X_real[3] = 427
+# [MAU 9] Ghi X_imag[3] = 312
+# [MAU 9] Ghi X_real[4] = -128
+# [MAU 9] Ghi X_imag[4] = -963
+# [MAU 9] Ghi X_real[5] = -84
+# [MAU 9] Ghi X_imag[5] = -22
+# [MAU 9] Ghi X_real[6] = -297
+# [MAU 9] Ghi X_imag[6] = -8
+# [MAU 9] Ghi X_real[7] = -21
+# [MAU 9] Ghi X_imag[7] = -603
+# 
+# --- KET QUA MAU 9 ---
+# Idx    | In_Real      | In_Imag      || Out_Real     | Out_Imag     | Complex
+# 0      | 87           | -763         || 123          | -86          | 123 + j-86
+# 1      | 518          | 735          || -188         | 201          | -188 + j201
+# 2      | 484          | 631          || -154         | -291         | -154 + j-291
+# 3      | 427          | 312          || -55          | 33           | -55 + j33
+# 4      | -128         | -963         || -87          | -191         | -87 + j-191
+# 5      | -84          | -22          || 81           | 43           | 81 + j43
+# 6      | -297         | -8           || 97           | -298         | 97 + j-298
+# 7      | -21          | -603         || 267          | -180         | 267 + j-180
+# 
+# --- GHI DU LIEU VAO MAU 10 ---
+# [MAU 10] Ghi X_real[0] = 333
+# [MAU 10] Ghi X_imag[0] = -790
+# [MAU 10] Ghi X_real[1] = 957
+# [MAU 10] Ghi X_imag[1] = 717
+# [MAU 10] Ghi X_real[2] = 477
+# [MAU 10] Ghi X_imag[2] = 543
+# [MAU 10] Ghi X_real[3] = 719
+# [MAU 10] Ghi X_imag[3] = 519
+# [MAU 10] Ghi X_real[4] = 369
+# [MAU 10] Ghi X_imag[4] = -552
+# [MAU 10] Ghi X_real[5] = -33
+# [MAU 10] Ghi X_imag[5] = -123
+# [MAU 10] Ghi X_real[6] = -469
+# [MAU 10] Ghi X_imag[6] = -3
+# [MAU 10] Ghi X_real[7] = 291
+# [MAU 10] Ghi X_imag[7] = -243
+# 
+# --- KET QUA MAU 10 ---
+# Idx    | In_Real      | In_Imag      || Out_Real     | Out_Imag     | Complex
+# 0      | 333          | -790         || 330          | 8            | 330 + j8
+# 1      | 957          | 717          || -165         | 220          | -165 + j220
+# 2      | 477          | 543          || 47           | -246         | 47 + j-246
+# 3      | 719          | 519          || -128         | -30          | -128 + j-30
+# 4      | 369          | -552         || -153         | -209         | -153 + j-209
+# 5      | -33          | -123         || 19           | -44          | 19 + j-44
+# 6      | -469         | -3           || 126          | -225         | 126 + j-225
+# 7      | 291          | -243         || 254          | -267         | 254 + j-267
+# 
+# --- GHI DU LIEU VAO MAU 11 ---
+# [MAU 11] Ghi X_real[0] = -307
+# [MAU 11] Ghi X_imag[0] = -113
+# [MAU 11] Ghi X_real[1] = 586
+# [MAU 11] Ghi X_imag[1] = -939
+# [MAU 11] Ghi X_real[2] = -156
+# [MAU 11] Ghi X_imag[2] = 371
+# [MAU 11] Ghi X_real[3] = 816
+# [MAU 11] Ghi X_imag[3] = 267
+# [MAU 11] Ghi X_real[4] = -420
+# [MAU 11] Ghi X_imag[4] = 195
+# [MAU 11] Ghi X_real[5] = 296
+# [MAU 11] Ghi X_imag[5] = 713
+# [MAU 11] Ghi X_real[6] = 343
+# [MAU 11] Ghi X_imag[6] = 286
+# [MAU 11] Ghi X_real[7] = -657
+# [MAU 11] Ghi X_imag[7] = -51
+# 
+# --- KET QUA MAU 11 ---
+# Idx    | In_Real      | In_Imag      || Out_Real     | Out_Imag     | Complex
+# 0      | -307         | -113         || 62           | 91           | 62 + j91
+# 1      | 586          | -939         || 16           | -120         | 16 + j-120
+# 2      | -156         | 371          || -59          | 18           | -59 + j18
+# 3      | 816          | 267          || 247          | 353          | 247 + j353
+# 4      | -420         | 195          || -198         | 93           | -198 + j93
+# 5      | 296          | 713          || -11          | -83          | -11 + j-83
+# 6      | 343          | 286          || -170         | -163         | -170 + j-163
+# 7      | -657         | -51          || -198         | -307         | -198 + j-307
+# 
+# --- GHI DU LIEU VAO MAU 12 ---
+# [MAU 12] Ghi X_real[0] = 407
+# [MAU 12] Ghi X_imag[0] = -455
+# [MAU 12] Ghi X_real[1] = 52
+# [MAU 12] Ghi X_imag[1] = -94
+# [MAU 12] Ghi X_real[2] = 315
+# [MAU 12] Ghi X_imag[2] = 458
+# [MAU 12] Ghi X_real[3] = -633
+# [MAU 12] Ghi X_imag[3] = -361
+# [MAU 12] Ghi X_real[4] = 231
+# [MAU 12] Ghi X_imag[4] = -135
+# [MAU 12] Ghi X_real[5] = 453
+# [MAU 12] Ghi X_imag[5] = -672
+# [MAU 12] Ghi X_real[6] = -70
+# [MAU 12] Ghi X_imag[6] = -936
+# [MAU 12] Ghi X_real[7] = -464
+# [MAU 12] Ghi X_imag[7] = -485
+# 
+# --- KET QUA MAU 12 ---
+# Idx    | In_Real      | In_Imag      || Out_Real     | Out_Imag     | Complex
+# 0      | 407          | -455         || 36           | -335         | 36 + j-335
+# 1      | 52           | -94          || -235         | -3           | -235 + j-3
+# 2      | 315          | 458          || 39           | 186          | 39 + j186
+# 3      | -633         | -361         || 154          | -179         | 154 + j-179
+# 4      | 231          | -135         || 184          | 68           | 184 + j68
+# 5      | 453          | -672         || -70          | 18           | -70 + j18
+# 6      | -70          | -936         || 59           | -215         | 59 + j-215
+# 7      | -464         | -485         || 237          | 2            | 237 + j2
+# 
+# --- GHI DU LIEU VAO MAU 13 ---
+# [MAU 13] Ghi X_real[0] = -610
+# [MAU 13] Ghi X_imag[0] = 517
+# [MAU 13] Ghi X_real[1] = -474
+# [MAU 13] Ghi X_imag[1] = 764
+# [MAU 13] Ghi X_real[2] = 296
+# [MAU 13] Ghi X_imag[2] = 130
+# [MAU 13] Ghi X_real[3] = 687
+# [MAU 13] Ghi X_imag[3] = 668
+# [MAU 13] Ghi X_real[4] = 493
+# [MAU 13] Ghi X_imag[4] = -581
+# [MAU 13] Ghi X_real[5] = 532
+# [MAU 13] Ghi X_imag[5] = 32
+# [MAU 13] Ghi X_real[6] = -227
+# [MAU 13] Ghi X_imag[6] = 205
+# [MAU 13] Ghi X_real[7] = 197
+# [MAU 13] Ghi X_imag[7] = 220
+# 
+# --- KET QUA MAU 13 ---
+# Idx    | In_Real      | In_Imag      || Out_Real     | Out_Imag     | Complex
+# 0      | -610         | 517          || 111          | 244          | 111 + j244
+# 1      | -474         | 764          || -366         | 182          | -366 + j182
+# 2      | 296          | 130          || -12          | -154         | -12 + j-154
+# 3      | 687          | 668          || -120         | 1            | -120 + j1
+# 4      | 493          | -581         || -124         | -177         | -124 + j-177
+# 5      | 532          | 32           || 107          | 222          | 107 + j222
+# 6      | -227         | 205          || -35          | 53           | -35 + j53
+# 7      | 197          | 220          || -176         | 142          | -176 + j142
+# 
+# --- GHI DU LIEU VAO MAU 14 ---
+# [MAU 14] Ghi X_real[0] = 8
+# [MAU 14] Ghi X_imag[0] = -157
+# [MAU 14] Ghi X_real[1] = 695
+# [MAU 14] Ghi X_imag[1] = -334
+# [MAU 14] Ghi X_real[2] = -477
+# [MAU 14] Ghi X_imag[2] = -323
+# [MAU 14] Ghi X_real[3] = -262
+# [MAU 14] Ghi X_imag[3] = -905
+# [MAU 14] Ghi X_real[4] = 116
+# [MAU 14] Ghi X_imag[4] = 144
+# [MAU 14] Ghi X_real[5] = -371
+# [MAU 14] Ghi X_imag[5] = 782
+# [MAU 14] Ghi X_real[6] = 607
+# [MAU 14] Ghi X_imag[6] = 837
+# [MAU 14] Ghi X_real[7] = -290
+# [MAU 14] Ghi X_imag[7] = -713
+# 
+# --- KET QUA MAU 14 ---
+# Idx    | In_Real      | In_Imag      || Out_Real     | Out_Imag     | Complex
+# 0      | 8            | -157         || 3            | -84          | 3 + j-84
+# 1      | 695          | -334         || 338          | -159         | 338 + j-159
+# 2      | -477         | -323         || -259         | 43           | -259 + j43
+# 3      | -262         | -905         || -135         | 276          | -135 + j276
+# 4      | 116          | 144          || 60           | 208          | 60 + j208
+# 5      | -371         | 782          || -77          | -189         | -77 + j-189
+# 6      | 607          | 837          || 257          | -176         | 257 + j-176
+# 7      | -290         | -713         || -183         | -81          | -183 + j-81
+# 
+# --- GHI DU LIEU VAO MAU 15 ---
+# [MAU 15] Ghi X_real[0] = 326
+# [MAU 15] Ghi X_imag[0] = -131
+# [MAU 15] Ghi X_real[1] = -370
+# [MAU 15] Ghi X_imag[1] = -395
+# [MAU 15] Ghi X_real[2] = -526
+# [MAU 15] Ghi X_imag[2] = 429
+# [MAU 15] Ghi X_real[3] = -662
+# [MAU 15] Ghi X_imag[3] = 324
+# [MAU 15] Ghi X_real[4] = 126
+# [MAU 15] Ghi X_imag[4] = 731
+# [MAU 15] Ghi X_real[5] = 849
+# [MAU 15] Ghi X_imag[5] = 243
+# [MAU 15] Ghi X_real[6] = -356
+# [MAU 15] Ghi X_imag[6] = 877
+# [MAU 15] Ghi X_real[7] = 91
+# [MAU 15] Ghi X_imag[7] = -758
+# 
+# --- KET QUA MAU 15 ---
+# Idx    | In_Real      | In_Imag      || Out_Real     | Out_Imag     | Complex
+# 0      | 326          | -131         || -66          | 165          | -66 + j165
+# 1      | -370         | -395         || 0            | -456         | 0 + j-456
+# 2      | -526         | 429          || 131          | 43           | 131 + j43
+# 3      | -662         | 324          || -30          | -109         | -30 + j-109
+# 4      | 126          | 731          || -43          | 311          | -43 + j311
+# 5      | 849          | 243          || 161          | 197          | 161 + j197
+# 6      | -356         | 877          || 202          | -220         | 202 + j-220
+# 7      | 91           | -758         || -34          | -65          | -34 + j-65
+# 
+# --- GHI DU LIEU VAO MAU 16 ---
+# [MAU 16] Ghi X_real[0] = 656
+# [MAU 16] Ghi X_imag[0] = -108
+# [MAU 16] Ghi X_real[1] = 26
+# [MAU 16] Ghi X_imag[1] = -665
+# [MAU 16] Ghi X_real[2] = -444
+# [MAU 16] Ghi X_imag[2] = 183
+# [MAU 16] Ghi X_real[3] = -578
+# [MAU 16] Ghi X_imag[3] = 563
+# [MAU 16] Ghi X_real[4] = -850
+# [MAU 16] Ghi X_imag[4] = 871
+# [MAU 16] Ghi X_real[5] = 121
+# [MAU 16] Ghi X_imag[5] = 0
+# [MAU 16] Ghi X_real[6] = -92
+# [MAU 16] Ghi X_imag[6] = -960
+# [MAU 16] Ghi X_real[7] = -335
+# [MAU 16] Ghi X_imag[7] = -830
+# 
+# --- KET QUA MAU 16 ---
+# Idx    | In_Real      | In_Imag      || Out_Real     | Out_Imag     | Complex
+# 0      | 656          | -108         || -187         | -119         | -187 + j-119
+# 1      | 26           | -665         || -7           | -379         | -7 + j-379
+# 2      | -444         | 183          || 92           | 325          | 92 + j325
+# 3      | -578         | 563          || 253          | 73           | 253 + j73
+# 4      | -850         | 871          || 4            | 114          | 4 + j114
+# 5      | 121          | 0            || 96           | 45           | 96 + j45
+# 6      | -92          | -960         || -7           | 60           | -7 + j60
+# 7      | -335         | -830         || 408          | -231         | 408 + j-231
+# 
+# --- GHI DU LIEU VAO MAU 17 ---
+# [MAU 17] Ghi X_real[0] = 66
+# [MAU 17] Ghi X_imag[0] = -834
+# [MAU 17] Ghi X_real[1] = 770
+# [MAU 17] Ghi X_imag[1] = -770
+# [MAU 17] Ghi X_real[2] = 622
+# [MAU 17] Ghi X_imag[2] = 895
+# [MAU 17] Ghi X_real[3] = 24
+# [MAU 17] Ghi X_imag[3] = -468
+# [MAU 17] Ghi X_real[4] = 928
+# [MAU 17] Ghi X_imag[4] = 97
+# [MAU 17] Ghi X_real[5] = -427
+# [MAU 17] Ghi X_imag[5] = -808
+# [MAU 17] Ghi X_real[6] = -837
+# [MAU 17] Ghi X_imag[6] = 143
+# [MAU 17] Ghi X_real[7] = -561
+# [MAU 17] Ghi X_imag[7] = 743
+# 
+# --- KET QUA MAU 17 ---
+# Idx    | In_Real      | In_Imag      || Out_Real     | Out_Imag     | Complex
+# 0      | 66           | -834         || 73           | -126         | 73 + j-126
+# 1      | 770          | -770         || -45          | 333          | -45 + j333
+# 2      | 622          | 895          || 382          | -112         | 382 + j-112
+# 3      | 24           | -468         || 35           | -252         | 35 + j-252
+# 4      | 928          | 97           || 121          | 200          | 121 + j200
+# 5      | -427         | -808         || -360         | -202         | -360 + j-202
+# 6      | -837         | 143          || -81          | -332         | -81 + j-332
+# 7      | -561         | 743          || -64          | -347         | -64 + j-347
+# 
+# --- GHI DU LIEU VAO MAU 18 ---
+# [MAU 18] Ghi X_real[0] = 285
+# [MAU 18] Ghi X_imag[0] = -489
+# [MAU 18] Ghi X_real[1] = -5
+# [MAU 18] Ghi X_imag[1] = -500
+# [MAU 18] Ghi X_real[2] = -667
+# [MAU 18] Ghi X_imag[2] = -466
+# [MAU 18] Ghi X_real[3] = -834
+# [MAU 18] Ghi X_imag[3] = -790
+# [MAU 18] Ghi X_real[4] = 204
+# [MAU 18] Ghi X_imag[4] = 398
+# [MAU 18] Ghi X_real[5] = 301
+# [MAU 18] Ghi X_imag[5] = -842
+# [MAU 18] Ghi X_real[6] = 128
+# [MAU 18] Ghi X_imag[6] = 238
+# [MAU 18] Ghi X_real[7] = -990
+# [MAU 18] Ghi X_imag[7] = -535
+# 
+# --- KET QUA MAU 18 ---
+# Idx    | In_Real      | In_Imag      || Out_Real     | Out_Imag     | Complex
+# 0      | 285          | -489         || -198         | -374         | -198 + j-374
+# 1      | -5           | -500         || 49           | -172         | 49 + j-172
+# 2      | -667         | -466         || 130          | 282          | 130 + j282
+# 3      | -834         | -790         || -45          | -78          | -45 + j-78
+# 4      | 204          | 398          || 184          | 293          | 184 + j293
+# 5      | 301          | -842         || 146          | -250         | 146 + j-250
+# 6      | 128          | 238          || 126          | -248         | 126 + j-248
+# 7      | -990         | -535         || -112         | 54           | -112 + j54
+# 
+# --- GHI DU LIEU VAO MAU 19 ---
+# [MAU 19] Ghi X_real[0] = -986
+# [MAU 19] Ghi X_imag[0] = -416
+# [MAU 19] Ghi X_real[1] = -884
+# [MAU 19] Ghi X_imag[1] = 221
+# [MAU 19] Ghi X_real[2] = -442
+# [MAU 19] Ghi X_imag[2] = -845
+# [MAU 19] Ghi X_real[3] = 441
+# [MAU 19] Ghi X_imag[3] = 463
+# [MAU 19] Ghi X_real[4] = 668
+# [MAU 19] Ghi X_imag[4] = 224
+# [MAU 19] Ghi X_real[5] = -152
+# [MAU 19] Ghi X_imag[5] = 642
+# [MAU 19] Ghi X_real[6] = 333
+# [MAU 19] Ghi X_imag[6] = 66
+# [MAU 19] Ghi X_real[7] = 424
+# [MAU 19] Ghi X_imag[7] = 843
+# 
+# --- KET QUA MAU 19 ---
+# Idx    | In_Real      | In_Imag      || Out_Real     | Out_Imag     | Complex
+# 0      | -986         | -416         || -75          | 149          | -75 + j149
+# 1      | -884         | 221          || -89          | -244         | -89 + j-244
+# 2      | -442         | -845         || 29           | -165         | 29 + j-165
+# 3      | 441          | 463          || -184         | -43          | -184 + j-43
+# 4      | 668          | 224          || -32          | -393         | -32 + j-393
+# 5      | -152         | 642          || -98          | -111         | -98 + j-111
+# 6      | 333          | 66           || -82          | 311          | -82 + j311
+# 7      | 424          | 843          || -458         | 76           | -458 + j76
+# 
+# >> TEST HOAN TAT <<
+# Break in Module top_module_tb at C:/Users/SUS/Desktop/HDL/Doan/top_module_tb.v line 147
+# Simulation Breakpoint: Break in Module top_module_tb at C:/Users/SUS/Desktop/HDL/Doan/top_module_tb.v line 147
+# MACRO ./Doan_run_msim_rtl_verilog.do PAUSED at line 20

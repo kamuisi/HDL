@@ -1,0 +1,13 @@
+module SRAM(ADDRESS, WirteData, ReadData, WriteEn, ReadEn, clk);
+input [5:0] ADDRESS;
+input [31:0] WriteData;
+reg [31:0] Mem [0:31];
+output reg [31:0] ReadData;
+input WriteEn, ReadEn, clk;
+
+always @(posedge clk)
+if(WriteEn == 1)
+	Mem[ADDRESS] <= WriteData;
+if(ReadEn == 1)
+	ReadData <= Mem[ADDRESS]; 
+endmodule

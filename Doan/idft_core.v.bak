@@ -1,0 +1,42 @@
+module idft_core(clk, rst, start, X_real, X_imag, x_real, x_imag
+done);
+parameter N = 8;
+parameter PI = 3.14159265;
+
+input clk, rst, start;
+input [31:0] X_real [0:N-1];
+input [31:0] X_imag [0:N-1];
+output reg done;
+output reg [31:0] x_real [0:N-1];
+output reg [31:0] x_imag [0:N-1];
+
+integer n, k;
+real W_real, W_imag;
+real sum_real, sum_imag;
+real angle;
+
+always @(posedge clk)
+begin	
+	if(rst)
+		done = 0;
+	else if(start)
+		for(n = 0; n < N; n = n + 1) 
+		begin
+			sum_real = 0;
+			sum_imag = 0;
+			for(k = 0; k < N; k = k + 1)
+			begin
+				angle = 2 * PI * k * n / N;
+				W_real = $cos(angle);
+				W_imag = $sin(angle);
+				sum_real = sum_real + (X_real[k] * W_real - X_imag[k] * W_imag);
+				sum_imag = sum_imag + (X_real[k] * W_imag + X_imag[k] * W_real);
+			end
+			x_real[n] = sum_real / N;
+			x_imag[n] = sum_imag / N;
+		end
+		done = 1;
+	else 
+		done = 0;
+end
+endmodule

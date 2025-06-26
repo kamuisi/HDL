@@ -1,0 +1,16 @@
+
+State Machine - |top_module|iDFT:u_idft|state
+Name state.WRITE state.WAIT state.READ state.IDLE state.DONE 
+state.IDLE 0 0 0 0 0 
+state.READ 0 0 1 1 0 
+state.WAIT 0 1 0 1 0 
+state.WRITE 1 0 0 1 0 
+state.DONE 0 0 0 1 1 
+
+State Machine - |top_module|wishbone_slave:u_slave|state
+Name state.WRITE state.WAIT state.READ state.IDLE state.DONE 
+state.IDLE 0 0 0 0 0 
+state.READ 0 0 1 1 0 
+state.WAIT 0 1 0 1 0 
+state.WRITE 1 0 0 1 0 
+state.DONE 0 0 0 1 1 
